@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Signika);
+
+.menu {
+	font-family: Futura;
+	display: block;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+a:hover {
+	text-shadow: 0 0 8px #BFD3D5;
+
+}
+
+.left {
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+}
+
+.right {
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+}
+
+.banner {
+	padding-top: 18px;
+}
+
+.toolapplyBorderLeft{
+	border-left: solid 2px gray; 
+}
+
+a {
+	display: inline-block;
+	color: #606466;
+    font-size: 18px;
+    text-decoration: none;
+	background-color: none;
+	padding-left: 15px;
+	padding-right: 15px;
+} 
