@@ -1,44 +1,26 @@
-@import url(https://fonts.googleapis.com/css?family=Signika);
-
-.menu {
-	font-family: Futura;
-	display: block;
-    color: black;
-    padding-top: 10px;
-    padding-bottom: 20px;
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
 }
 
-a:hover {
-	text-shadow: 0 0 8px #BFD3D5;
-
-}
-
-.left {
-	display: inline-block;
-	float: left;
-	margin-left: 10px;
-}
-
-.right {
-	display: inline-block;
-	float: right;
-	margin-right: 10px;
-}
-
-.banner {
-	padding-top: 18px;
-}
-
-.toolapplyBorderLeft{
-	border-left: solid 2px gray; 
+.toolbar {
+	background-color: #265860;
+	font-family: Helvetica;
+	text-align: center;
 }
 
 a {
-	display: inline-block;
-	color: #606466;
-    font-size: 18px;
-    text-decoration: none;
-	background-color: none;
-	padding-left: 15px;
-	padding-right: 15px;
-} 
+	color: white;
+}
+
+a:hover {
+	color: orange;
+}
