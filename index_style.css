@@ -1,3 +1,7 @@
+body {
+	font-family: Helvetica;
+}
+
 .stylish-input-group .input-group-addon{
     background: white !important; 
 }
@@ -13,14 +17,49 @@
 
 .toolbar {
 	background-color: #265860;
-	font-family: Helvetica;
 	text-align: center;
 }
 
 a {
 	color: white;
+	display: inline;
 }
 
 a:hover {
 	color: orange;
+}
+
+img#menu_icon {
+	display: inline;
+	width: 2.5%;
+	margin-bottom: 5px;
+}
+
+.navbar-header{
+	text-align: left;
+}
+
+.title {
+	display: inline;
+	padding-left: 10px;
+}
+#bar {
+	height:80px;
+}
+
+#searchbar {
+	height: 80px;
+}
+
+#imaginary_container {
+	width: 150%;
+}
+
+#recipe_item {
+	background-color: orange;
+	height: 40px;
+}
+
+#recipes {
+	margin-top: 10px;
 }

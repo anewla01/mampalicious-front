@@ -15,16 +15,19 @@
 	<nav class="navbar">
 		<div class="container-fluid toolbar">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand"> <strong> PEACE CORPS </strong> RECIPES</a>
+				<a href="index.html" class="navbar-brand"> 
+					<img id="menu_icon" src="Design_files/menuicon.png"/>
+					<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
+				</a> 
 			</div>
 		</div>
 	</nav>
-	<div class="container">
-	<div class="row">
-	    <div class="col-sm-6 col-sm-offset-3">
+	<div class="container-fluid">
+	<div class="row" id="searchbar">
+	    <div class="col-sm-6 col-sm-offset-3" id="bar">
 	            <div id="imaginary_container"> 
 	                <div class="input-group stylish-input-group">
-	                    <input type="text" class="form-control"  placeholder="Search" >
+	                    <input type="text" class="form-control"  placeholder="What ingredients do you have? " >
 	                    <span class="input-group-addon">
 	                        <button type="submit">
 	                            <span class="glyphicon glyphicon-search"></span>
@@ -33,6 +36,9 @@
 	                </div>
 	            </div>
 	        </div>
+		</div>
+	<div class="row" id="recipes">
+		<div class="col-sm-6 col-sm-offset-3" id="recipe_item"> </div>
 		</div>
 	</div>
 </body>
