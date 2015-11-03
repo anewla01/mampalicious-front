@@ -27,39 +27,53 @@ a {
 
 a:hover {
 	color: orange;
+	text-decoration: none;
 }
 
 img#menu_icon {
 	display: inline;
 	width: 2.5%;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 
 .navbar-header{
 	text-align: left;
+	height: 45px;
+	padding-top: 10px;
 }
 
 .title {
 	display: inline;
 	padding-left: 10px;
+	font-size: 20px;
 }
+
 #bar {
 	height:80px;
+	padding: 0px;
 }
 
 #searchbar {
 	height: 80px;
 }
 
-#imaginary_container {
-	width: 150%;
+.form-control {
+	height: 60px;
+	font-size: 20px;
 }
 
 #recipe_item {
-	background-color: orange;
+	background-color: cornflowerblue;
 	height: 40px;
 }
 
 #recipes {
 	margin-top: 10px;
+}
+
+#slide_menu_icon {
+	height: 100%;
+	width: 10%;
+	background-color: gray;
+	position:fixed;
 }

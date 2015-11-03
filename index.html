@@ -10,22 +10,33 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" > </script>
 	<link rel="stylesheet" href="index_style.css" type="text/css"/>
+	<script src ="index.js"> </script>
 </head>
 <body>
+
+	<div id="slide_menu_icon">
+		<ul>
+			<li> About </li>
+			<li> Contact </li>
+		</ul>
+	</div>
+
+	<div id="content">
+
 	<nav class="navbar">
 		<div class="container-fluid toolbar">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand"> 
-					<img id="menu_icon" src="Design_files/menuicon.png"/>
+				<img id="menu_icon" src="Design_files/menuicon.png"/>
+				<a href="index.html"> 
 					<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
 				</a> 
 			</div>
 		</div>
 	</nav>
+
 	<div class="container-fluid">
 	<div class="row" id="searchbar">
-	    <div class="col-sm-6 col-sm-offset-3" id="bar">
-	            <div id="imaginary_container"> 
+	    <div class="col-sm-8 col-sm-offset-2" id="bar">
 	                <div class="input-group stylish-input-group">
 	                    <input type="text" class="form-control"  placeholder="What ingredients do you have? " >
 	                    <span class="input-group-addon">
@@ -34,12 +45,15 @@
 	                        </button>  
 	                    </span>
 	                </div>
-	            </div>
 	        </div>
 		</div>
 	<div class="row" id="recipes">
-		<div class="col-sm-6 col-sm-offset-3" id="recipe_item"> </div>
+		<div class="col-sm-8 col-sm-offset-2" id="recipe_item"> </div>
 		</div>
+	</div>
+
+
+
 	</div>
 </body>
 
