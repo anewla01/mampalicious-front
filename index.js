@@ -1,17 +1,16 @@
 $(document).ready(function() {
 
-	// $("#slide_menu_icon").hide();
+
+	$("#slide_menu_icon").hide();
 
 	$("#menu_icon").click(function() {
 
 
-		console.log('clicked!');
+		// console.log('clicked!');
 
-		$("#content").animate({
-			left: "500px"
-			});	
-
-		
+		$(".container-fluid").animate({
+			left: "10%"
+		});	
 
 		$("#slide_menu_icon").toggle();
 		});
