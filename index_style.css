@@ -39,6 +39,7 @@ img#menu_icon {
 .navbar-header{
 	text-align: left;
 	height: 45px;
+	padding-left: 50px;
 	padding-top: 10px;
 }
 
