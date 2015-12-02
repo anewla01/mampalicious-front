@@ -39,6 +39,10 @@ img#menu_icon {
 .navbar-header{
 	text-align: left;
 	height: 45px;
+<<<<<<< HEAD
+=======
+	padding-left: 10px;
+>>>>>>> ef8d56a7f6a19acf3ee8cc851532d7a15cbd0100
 	padding-top: 10px;
 }
 
@@ -59,6 +63,10 @@ img#menu_icon {
 
 #searchbar {
 	height: 80px;
+<<<<<<< HEAD
+=======
+	padding: 5%;
+>>>>>>> ef8d56a7f6a19acf3ee8cc851532d7a15cbd0100
 }
 
 .form-control {
@@ -69,27 +77,50 @@ img#menu_icon {
 #recipe_item {
 	background-color: orange;
 	height: 40px;
+<<<<<<< HEAD
 }
 
 #recipes {
 	margin-top: 10px;
+=======
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+#recipes {
+	padding-top: 5%;
+	padding: 3%;
+>>>>>>> ef8d56a7f6a19acf3ee8cc851532d7a15cbd0100
 }
 
 #slide_menu_icon {
 	height: 100%;
+<<<<<<< HEAD
 	width: 32.5%;
 	background-color: lightgray;
 	position:fixed;
 	padding-top: 55px;
 	z-index: 25;
+=======
+	width: 10%;
+	background-color: lightgray;
+	position:fixed;
+	padding-top: 55px;
+>>>>>>> ef8d56a7f6a19acf3ee8cc851532d7a15cbd0100
  }
 
  ul {
 	list-style-type: none;
 	font-size: 16px;
+<<<<<<< HEAD
 	font-family: Helvetica;
 	color: #265860;
 	padding-left: 30px;
+=======
+	font-family: Futura;
+	color: #265860;
+	padding-left: 10%;
+>>>>>>> ef8d56a7f6a19acf3ee8cc851532d7a15cbd0100
  }
 
  li {
