@@ -22,7 +22,7 @@ function search() {
 	var box = document.getElementById('recipes');
 	var keyword = document.getElementById('search-bar').value;
 	box.innerHTML = keyword;
-	//console.log("just set the recieps to " + keyword);
+	console.log("just set the recieps to " + keyword);
 
 	var xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
