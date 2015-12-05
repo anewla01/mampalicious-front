@@ -30,8 +30,8 @@ function search() {
 
 	    }
 	  };
-	 xhttp.open("GET", "https://mampalicious.herokuapp.com/searchtitle?title=" + keyword, true);
-	  xhttp.send();
+	 xhttp.open("GET", "https://mampalicious.herokuapp.com/searchtitle?title=" + keyword.toLowerCase(), true);
+	 xhttp.send();
 
 }
 
