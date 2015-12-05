@@ -35,3 +35,11 @@ function search() {
 	  xhttp.send();
 
 }
+
+function keypress_search(event) {
+
+	if(event.keyCode == 13){
+		search();
+	}
+
+}
