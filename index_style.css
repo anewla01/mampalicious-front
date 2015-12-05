@@ -39,6 +39,7 @@ img#menu_icon {
 .navbar-header{
 	text-align: left;
 	height: 45px;
+	padding-left: 10px;
 	padding-top: 10px;
 }
 
@@ -59,6 +60,7 @@ img#menu_icon {
 
 #searchbar {
 	height: 80px;
+	padding: 5%;
 }
 
 .form-control {
@@ -69,10 +71,13 @@ img#menu_icon {
 #recipe_item {
 	background-color: orange;
 	height: 40px;
+	padding-left: 15%;
+	padding-right: 15%;
 }
 
 #recipes {
-	margin-top: 10px;
+	padding-top: 5%;
+	padding: 3%;
 }
 
 #slide_menu_icon {
@@ -88,7 +93,7 @@ img#menu_icon {
 	font-size: 16px;
 	font-family: Futura;
 	color: #265860;
-	padding-left: 30px;
+	padding-left: 10%;
  }
 
  li {
