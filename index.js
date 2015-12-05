@@ -17,12 +17,11 @@ $(document).ready(function() {
 });
 
 
+/* Sends request to search for recipes by title */
 function search() {
 
 	var box = document.getElementById('recipes');
 	var keyword = document.getElementById('search-bar').value;
-	box.innerHTML = keyword;
-	//console.log("just set the recieps to " + keyword);
 
 	var xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
@@ -36,10 +35,10 @@ function search() {
 
 }
 
+/* Handles the event of a enter-bar initiated search */
 function keypress_search(event) {
 
 	if(event.keyCode == 13){
 		search();
 	}
-
 }
