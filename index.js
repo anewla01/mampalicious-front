@@ -31,7 +31,7 @@ function search() {
 
 	    }
 	  };
-	 xhttp.open("GET", "https://mampalicious.herokuapp.com/search?title=" + keyword, true);
+	 xhttp.open("GET", "https://mampalicious.herokuapp.com/searchtitle?title=" + keyword, true);
 	  xhttp.send();
 
 }
