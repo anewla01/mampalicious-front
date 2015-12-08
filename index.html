@@ -12,6 +12,20 @@
 	<link rel="stylesheet" href="index_style.css" type="text/css"/>
 	<script src ="index.js"> </script>
 
+	<script>
+
+		$(document).ready(function() {
+			$(".recipe_info").addClass("hidden");
+
+			$(".read_more").click(function(event) {
+				console.log($(event.target).find(".glyphicon"));
+				$(event.target).closest(".read_more").find(".glyphicon").toggleClass("glyphicon-menu-down").toggleClass("glyphicon-menu-up");
+				$(event.target).closest(".recipe_item").find(".recipe_info").toggleClass("hidden");
+			});
+		});
+
+	</script>
+
 </head>
 <body>
 
@@ -24,20 +38,22 @@
 
 	<div id="content">
 
-	<nav class="navbar">
-		<div class="container-fluid toolbar">
-			<div class="navbar-header">
-				<img id="menu_icon" src="Design_files/menuicon.png"/>
-				<a href="index.html"> 
-					<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
-				</a> 
+		<nav class="navbar">
+			<div class="container-fluid toolbar">
+				<div class="navbar-header">
+					<img id="menu_icon" src="Design_files/menuicon.png"/>
+					<a href="index.html"> 
+                		<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
+					</a> 
+				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
 
-	<div class="container-fluid">
-	<div class="row" id="searchbar">
-	    <div class="col-sm-8 col-sm-offset-2" id="bar">
+		<div class="container-fluid">
+
+			<!-- Search Bar -->
+			<div class="row" id="searchbar">
+			    <div class="col-sm-8 col-sm-offset-2" id="bar">
 	                <div class="input-group stylish-input-group">
 	                    <input type="text" class="form-control"  placeholder="What ingredients do you have? " >
 	                    <span class="input-group-addon">
@@ -46,16 +62,103 @@
 	                        </button>  
 	                    </span>
 	                </div>
-	        </div>
+		        </div>
+			</div>
+
+
+			<!-- Results -->
+
+			<!-- Sample Result:
+
+			{
+			    "_id": {
+			        "$oid": "56259a81e4b0dbc5bd364afd"
+			    },
+			    "title": "Homemade Tahini",
+			    "amounts": [
+			        "4 cups",
+			        "1/4 to 1/2 cup"
+			    ],
+			    "ingredients": [
+			        "sesame seeds",
+			        "vegetable oil"
+			    ],
+			    "instructions": "Preheat oven to 350 degrees. Spread sesame seeds on baking sheet and bake for 8 to 10 minutes, but do not brown. Put sesame seeds in a blender or grind with a mortar and pestle, then add vegetable oil to make a smooth paste."
+			}
+
+			-->
+
+			<div class="row" id="recipes" style="padding: 10px;">
+				<div class="col-sm-8 col-sm-offset-2 recipe_item"> 
+					
+					<div class="clearfix">
+						<div class="recipe_title">
+							Homemade Tahini
+						</div>
+						<div class="read_more">
+							<span class="glyphicon glyphicon-menu-down"></span>
+						</div>
+					</div>
+
+					<div class="recipe_info">
+						<div class="recipe_ingredients">
+							Requires:
+							<ul>
+								<li> Sesame Seeds </li>
+								<li> Vegetable Oil </li>
+							</ul>
+						</div>
+
+						<div class="recipe_instructions">
+							<div style="padding-bottom: 7px;">Instructions: </div>
+							<div style="line-height: 1.5;">
+								Preheat oven to 350 degrees. Spread sesame seeds on baking sheet and bake for 8 to 10 minutes, but do not brown. Put sesame seeds in a blender or grind with a mortar and pestle, then add vegetable oil to make a smooth paste.
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row" id="recipes" style="padding: 10px;">
+				<div class="col-sm-8 col-sm-offset-2 recipe_item"> 
+					
+					<div class="clearfix">
+						<div class="recipe_title">
+							Homemade Tahini
+						</div>
+						<div class="read_more">
+							<span class="glyphicon glyphicon-menu-down"></span>
+						</div>
+					</div>
+
+					<div class="recipe_info">
+						<div class="recipe_ingredients">
+							Requires:
+							<ul>
+								<li> Sesame Seeds </li>
+								<li> Vegetable Oil </li>
+							</ul>
+						</div>
+
+						<div class="recipe_instructions">
+							<div style="padding-bottom: 7px;">Instructions: </div>
+							<div style="line-height: 1.5;">
+								Preheat oven to 350 degrees. Spread sesame seeds on baking sheet and bake for 8 to 10 minutes, but do not brown. Put sesame seeds in a blender or grind with a mortar and pestle, then add vegetable oil to make a smooth paste.
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
 		</div>
-	<div class="row" id="recipes">
-		<div class="col-sm-8 col-sm-offset-2" id="recipe_item"> </div>
-		</div>
+
 	</div>
 
 
-
-	</div>
 </body>
 
 </html>
