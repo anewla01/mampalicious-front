@@ -13,7 +13,16 @@ $(document).ready(function() {
 		});	
 
 		$("#slide_menu_icon").toggle();
-		});
+	});
+
+	$(".btn").click(function(e) {
+		var target = $(e.target), type;
+		if (target.is('#title')) {
+			type = "title";
+		} else if (target.is('#ingred')) {
+			type = "ingredients";
+		}
+	});
 });
 
 
