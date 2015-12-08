@@ -1,0 +1,124 @@
+body {
+	font-family: Helvetica;
+	
+    background-image: url(http://paradigmmalibu.com/wp-content/uploads/2014/02/organic-food.jpg);
+    
+    background-repeat:no-repeat;
+
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.toolbar {
+	background-color: #265860;
+	text-align: center;
+}
+
+a {
+	color: white;
+	display: inline;
+}
+
+a:hover {
+	color: orange;
+	text-decoration: none;
+}
+
+img#menu_icon {
+	display: inline;
+	width: 2.5%;
+	margin-bottom: 8px;
+}
+
+.navbar-header{
+	text-align: left;
+	height: 45px;
+	padding-top: 10px;
+}
+
+.navbar {
+	border: none;
+}
+
+.title {
+	display: inline;
+	padding-left: 10px;
+	font-size: 20px;
+}
+
+#bar {
+	height:80px;
+	padding: 0px;
+}
+
+#searchbar {
+	height: 80px;
+}
+
+.form-control {
+	height: 60px;
+	font-size: 20px;
+}
+
+#recipe_item {
+	background-color: orange;
+	height: 40px;
+}
+
+#recipes {
+	margin-top: 10px;
+}
+
+#slide_menu_icon {
+	height: 100%;
+	width: 10%;
+	background-color: lightgray;
+	position:fixed;
+	padding-top: 55px;
+ }
+
+#q_about{
+
+	color: white;
+	font-size: 20px;
+	list-style-type: none;
+    padding-top: 30px;
+    padding-left: 0px;
+    text-align; left;
+  
+	
+}
+
+#content_about{
+	color:white;
+	font-size: 15px;
+	padding-bottom: 10px;
+	text-align: left;
+}
+
+ #navul{
+	list-style-type: none;
+	font-size: 16px;
+	font-family: Futura;
+	color: #265860;
+	padding-left: 30px;
+ }
+
+ #navli{
+ 	padding-top: 7px;
+
+}
+
+
+
