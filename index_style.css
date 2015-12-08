@@ -68,11 +68,11 @@ img#menu_icon {
 	font-size: 20px;
 }
 
-#recipe_item {
+.recipe_item {
+	display: inline-block;
 	background-color: orange;
-	height: 40px;
-	padding-left: 15%;
-	padding-right: 15%;
+	padding: 2.5%;
+	color: #333;
 }
 
 #recipes {
@@ -88,6 +88,15 @@ img#menu_icon {
 	padding-top: 55px;
  }
 
+ .recipe_ingredients ul {
+ 	list-style-type: circle;
+ 	font-family: Helvetica;
+ 	color: #333;
+ 	padding-left: 2.5%;
+ 	font-size: 14px;
+ 	line-height: 1.2;
+ }
+
  ul {
 	list-style-type: none;
 	font-size: 16px;
@@ -99,4 +108,46 @@ img#menu_icon {
  li {
  	padding-top: 7px;
 }
+
+.recipe_title {
+	float: left;
+	width: calc(100% - 100px);
+	font-weight: 700;
+}
+
+.recipe_instructions {
+}
+
+.recipe_ingredients {
+	padding: 10px 0px;
+}
+
+.read_more {
+	float: left;
+	width: 100px;
+}
+
+.read_more {
+	text-align: right;
+	font-weight: 700;
+	color: gray;
+	cursor: pointer;
+}
+.read_more:hover {
+	color: #265842;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.hidden {
+	display: none;
+}
+
 
