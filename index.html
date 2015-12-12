@@ -10,14 +10,27 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" > </script>
 	<link rel="stylesheet" href="index_style.css" type="text/css"/>
+	
 	<script src ="index.js"> </script>
+
+	<script>
+
+		$(document).ready(function() {
+
+			$(document).on("click", ".dropdown", function(event) {
+				$(event.target).closest(".dropdown").siblings(".more_info").toggleClass("hidden");
+			});
+
+		})
+
+	</script>
 
 </head>
 <body>
 
 	<div id="slide_menu_icon">
 		<ul>
-			<li><a href="about.html">  About </a></li>
+			<li><a href="about.html">About</a></li>
 			<li> <a href="contact.html">Contact</a> </li>
 		</ul>
 	</div>
@@ -36,27 +49,59 @@
 	</nav>
 
 	<div class="container-fluid">
-	<div class="row" id="searchbar">
-	    <div class="col-sm-8 col-sm-offset-2" id="bar">
-	                <div class="input-group stylish-input-group">
-	                    <input type="text" id="search-bar" class="form-control" onkeypress="keypress_search(event)" placeholder="What ingredients do you have?">
-	                    <span class="input-group-addon">
-	                        <button onclick="search()" type="submit">
-	                            <span class="glyphicon glyphicon-search"></span>
-	                        </button>  
-	                    </span>
-	                </div>
-	        </div>
+		<div class="row" id="searchbar">
+		    <div class="col-sm-8 col-sm-offset-2" id="bar">
+		                <div class="input-group stylish-input-group">
+		                    <input type="text" id="search-bar" class="form-control" onkeypress="keypress_search(event)" placeholder="What ingredients do you have?">
+		                    <span class="input-group-addon">
+		                        <button onclick="search()" type="submit">
+		                            <span class="glyphicon glyphicon-search"></span>
+		                        </button>  
+		                    </span>
+		                </div>
+		        </div>
+			</div>
+		<div  class="row" id="title_or_ingredient">
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default active" id="title"> Title  </button>
+				<button type="button" class="btn btn-default " id="ingred"> Ingredients </button>
+			</div> 
 		</div>
-	<div  class="row" id="title_or_ingredient">
-		<div class="btn-group" role="group">
-			<button type="button" class="btn btn-default active" id="title"> Title  </button>
-			<button type="button" class="btn btn-default " id="ingred"> Ingredients </button>
-		</div> 
-	</div>
 
-	<div class="row" id="recipes">
-		<div class="col-sm-8 col-sm-offset-2" id="recipe_item"> </div>
+		<!-- 
+
+			Sample Recipe 
+	
+			{
+			    "_id": {
+			        "$oid": "56259a81e4b0dbc5bd364afd"
+			    },
+			    "display_title": "Homemade Tahini",
+			    "title": "homemade tahini",
+			    "amounts": [
+			        "4 cups",
+			        "1/4 to 1/2 cup"
+			    ],
+			    "ingredients": [
+			        "sesame seeds",
+			        "vegetable oil"
+			    ],
+			    "instructions": "Preheat oven to 350 degrees. Spread sesame seeds on baking sheet and bake for 8 to 10 minutes, but do not brown. Put sesame seeds in a blender or grind with a mortar and pestle, then add vegetable oil to make a smooth paste."
+			}
+
+		-->
+
+		<div class="row" id="recipes">
+			<div class="col-sm-8 col-sm-offset-2 recipe_item hidden" id="recipe_template">
+				<div class="title"></div>
+				<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
+				<div class="more_info hidden">
+					<div class="ingredients">
+					</div>
+					<div class="instructions">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	</div>
