@@ -6,9 +6,9 @@ $(document).ready(function() {
 
 		// console.log('clicked!');
 
-		$(".container-fluid").animate({
-			left: "10%"
-		});	
+		// $(".container-fluid").animate({
+		// 	left: "10%"
+		// });	
 
 		$("#slide_menu_icon").toggle();
 	});

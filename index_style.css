@@ -6,9 +6,7 @@
 
 .btn-group {
 	display: inline-block;
-
 }
-
 
 body {
 	font-family: Helvetica;
@@ -46,7 +44,7 @@ a:hover {
 
 img#menu_icon {
 	display: inline;
-	width: 2.5%;
+	width: 20px;
 	margin-bottom: 8px;
 }
 
@@ -59,6 +57,7 @@ img#menu_icon {
 
 .navbar {
 	border: none;
+	z-index: 30;
 }
 
 .title {
@@ -89,6 +88,10 @@ img#menu_icon {
 	padding-right: 15%;
 }
 
+.container-fluid {
+	z-index: -1;
+}
+
 #recipes {
 	padding-top: 5%;
 	padding: 3%;
@@ -96,10 +99,11 @@ img#menu_icon {
 
 #slide_menu_icon {
 	height: 100%;
-	width: 10%;
+	width: 80px;
 	background-color: lightgray;
 	position:fixed;
 	padding-top: 55px;
+	z-index: 20;
  }
 
  ul {
@@ -113,4 +117,3 @@ img#menu_icon {
  li {
  	padding-top: 7px;
 }
-
