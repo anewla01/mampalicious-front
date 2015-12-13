@@ -55,7 +55,7 @@ function search() {
     			new_recipe.find(".instructions").html("Instructions: " + instructions);
 
     			var ingredient_list = new_recipe.find(".ingredients");
-	    		$.each(val.ingredients, function(i, ingredient) {
+	    		$.each(val.display_ingredients, function(i, ingredient) {
 	    			ingredient_list.append(ingredient + ", " + val.amounts[i] + "<br>");
 	    		});
 
