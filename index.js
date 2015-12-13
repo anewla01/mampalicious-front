@@ -72,7 +72,7 @@ function search() {
 
 	    }
 	  };
-	 xhttp.open("GET", "https://mampalicious.herokuapp.com/searchtitle?type="+type+"&keyword="+ keyword.toLowerCase(), true);
+	 xhttp.open("GET", "https://mampalicious.herokuapp.com/searchtitle?type="+type+"&keyword="+ keyword.toLowerCase()+"&keywordOriginal=" + keyword, true);
 	 xhttp.send();
 
 }
