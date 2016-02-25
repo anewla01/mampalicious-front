@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="Recipes">
 
 <head>
 	<title>Peace Corps Recipes</title>
@@ -10,22 +10,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" > </script>
 	<link rel="stylesheet" href="index_style.css" type="text/css"/>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	<script src ="index.js"> </script>
-
-	<script>
-
-		$(document).ready(function() {
-			$(document).on("click", ".dropdown", function(event) {
-				$(event.target).closest(".dropdown").siblings(".more_info").toggleClass("hidden");
-			});
-
-		})
-
-	</script>
-
 </head>
-<body>
+<body ng-controller="RecipesController">
 
 	<div id="slide_menu_icon">
 		<ul>
@@ -53,9 +41,9 @@
 		<div class="row" id="searchbar">
 		    <div class="col-sm-8 col-sm-offset-2" id="bar">
 		                <div class="input-group stylish-input-group">
-		                    <input type="text" id="search-bar" class="form-control" onkeypress="keypress_search(event)" placeholder="What ingredients do you have?">
+		                    <input type="text" id="search-bar" class="form-control" placeholder="What ingredients do you have?">
 		                    <span class="input-group-addon">
-		                        <button onclick="search()" type="submit">
+		                        <button ng-click="search()" type="submit">
 		                            <span class="glyphicon glyphicon-search"></span>
 		                        </button>  
 		                    </span>
@@ -82,8 +70,6 @@
 		</div>
 	</div>
 	</div>
-
-
 </body>
 
 </html>
