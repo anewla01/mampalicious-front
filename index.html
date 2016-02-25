@@ -10,19 +10,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" > </script>
 	<link rel="stylesheet" href="index_style.css" type="text/css"/>
+	
 	<script src ="index.js"> </script>
 
 	<script>
 
 		$(document).ready(function() {
-			$(".recipe_info").addClass("hidden");
-
-			$(".read_more").click(function(event) {
-				console.log($(event.target).find(".glyphicon"));
-				$(event.target).closest(".read_more").find(".glyphicon").toggleClass("glyphicon-menu-down").toggleClass("glyphicon-menu-up");
-				$(event.target).closest(".recipe_item").find(".recipe_info").toggleClass("hidden");
+			$(document).on("click", ".dropdown", function(event) {
+				$(event.target).closest(".dropdown").siblings(".more_info").toggleClass("hidden");
 			});
-		});
+
+		})
 
 	</script>
 
@@ -31,8 +29,8 @@
 
 	<div id="slide_menu_icon">
 		<ul>
-			<li><a href="about.html">  About </a></li>
-			<li> Contact </li>
+			<li><a href="about.html">About</a></li>
+			<li> <a href="contact.html">Contact</a> </li>
 		</ul>
 	</div>
 
@@ -51,127 +49,38 @@
 
 		<div class="container-fluid">
 
-			<!-- Search Bar -->
-			<div class="row" id="searchbar">
-			    <div class="col-sm-8 col-sm-offset-2" id="bar">
-	                <div class="input-group stylish-input-group">
-	                    <input type="text" id="search-bar" class="form-control" onkeypress="keypress_search(event)" placeholder="What ingredients do you have?">
-	                    <span class="input-group-addon">
-	                        <button onclick="search()" type="submit">
-	                            <span class="glyphicon glyphicon-search"></span>
-	                        </button>  
-	                    </span>
-	                </div>
+	<div class="container-fluid">
+		<div class="row" id="searchbar">
+		    <div class="col-sm-8 col-sm-offset-2" id="bar">
+		                <div class="input-group stylish-input-group">
+		                    <input type="text" id="search-bar" class="form-control" onkeypress="keypress_search(event)" placeholder="What ingredients do you have?">
+		                    <span class="input-group-addon">
+		                        <button onclick="search()" type="submit">
+		                            <span class="glyphicon glyphicon-search"></span>
+		                        </button>  
+		                    </span>
+		                </div>
 		        </div>
 			</div>
-
-
-			<!-- Results -->
-
-			<!-- Sample Result:
-
-			{
-			    "_id": {
-			        "$oid": "56259a81e4b0dbc5bd364afd"
-			    },
-			    "title": "Homemade Tahini",
-			    "amounts": [
-			        "4 cups",
-			        "1/4 to 1/2 cup"
-			    ],
-			    "ingredients": [
-			        "sesame seeds",
-			        "vegetable oil"
-			    ],
-			    "instructions": "Preheat oven to 350 degrees. Spread sesame seeds on baking sheet and bake for 8 to 10 minutes, but do not brown. Put sesame seeds in a blender or grind with a mortar and pestle, then add vegetable oil to make a smooth paste."
-			}
-
-			-->
-	        </div>
+		<div  class="row" id="title_or_ingredient">
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default active" id="title"> Title  </button>
+				<button type="button" class="btn btn-default " id="ingred"> Ingredients </button>
+			</div> 
 		</div>
-	<div  class="row" id="title_or_ingredient">
-		<div class="btn-group " role="group">
-			<button type="button" class="btn btn-default "> Title  </button>
-			<button type="button" class="btn btn-default "> Ingredients </button>
-		</div> 
-	</div>
-
-	<div class="row" id="recipes">
-		<div class="col-sm-8 col-sm-offset-2" id="recipe_item"> </div>
-		</div>
-	</div>
-
-	<div>
-		<div>
-
-			<div class="row" id="recipes" style="padding: 10px;">
-				<div class="col-sm-8 col-sm-offset-2 recipe_item"> 
-					
-					<div class="clearfix">
-						<div class="recipe_title">
-							Homemade Tahini
-						</div>
-						<div class="read_more">
-							<span class="glyphicon glyphicon-menu-down"></span>
-						</div>
+		<div class="row" id="recipes">
+			<div class="col-sm-8 col-sm-offset-2 recipe_item hidden" id="recipe_template">
+				<div class="title"></div>
+				<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
+				<div class="more_info hidden">
+					<div class="ingredients">
 					</div>
-
-					<div class="recipe_info">
-						<div class="recipe_ingredients">
-							Requires:
-							<ul>
-								<li> Sesame Seeds </li>
-								<li> Vegetable Oil </li>
-							</ul>
-						</div>
-
-						<div class="recipe_instructions">
-							<div style="padding-bottom: 7px;">Instructions: </div>
-							<div style="line-height: 1.5;">
-								Preheat oven to 350 degrees. Spread sesame seeds on baking sheet and bake for 8 to 10 minutes, but do not brown. Put sesame seeds in a blender or grind with a mortar and pestle, then add vegetable oil to make a smooth paste.
-							</div>
-						</div>
+					<div class="instructions">
 					</div>
-
 				</div>
 			</div>
-
-			<div class="row" id="recipes" style="padding: 10px;">
-				<div class="col-sm-8 col-sm-offset-2 recipe_item"> 
-					
-					<div class="clearfix">
-						<div class="recipe_title">
-							Homemade Tahini
-						</div>
-						<div class="read_more">
-							<span class="glyphicon glyphicon-menu-down"></span>
-						</div>
-					</div>
-
-					<div class="recipe_info">
-						<div class="recipe_ingredients">
-							Requires:
-							<ul>
-								<li> Sesame Seeds </li>
-								<li> Vegetable Oil </li>
-							</ul>
-						</div>
-
-						<div class="recipe_instructions">
-							<div style="padding-bottom: 7px;">Instructions: </div>
-							<div style="line-height: 1.5;">
-								Preheat oven to 350 degrees. Spread sesame seeds on baking sheet and bake for 8 to 10 minutes, but do not brown. Put sesame seeds in a blender or grind with a mortar and pestle, then add vegetable oil to make a smooth paste.
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-
-
 		</div>
-
+	</div>
 	</div>
 
 

@@ -96,8 +96,19 @@ img#menu_icon {
     padding-top: 30px;
     padding-left: 0px;
     text-align; left;
+    opacity: 1;
   
 	
+}
+
+#middle_box{
+
+	width:400px; 
+	height: 400px; 
+	margin:0 
+	auto; 
+	background-color:rgba(38, 88, 96, 0.8); 
+    align; 
 }
 
 #content_about{
@@ -105,6 +116,7 @@ img#menu_icon {
 	font-size: 15px;
 	padding-bottom: 10px;
 	text-align: left;
+	opacity:1;
 }
 
  #navul{
