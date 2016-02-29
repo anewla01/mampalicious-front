@@ -1,23 +1,37 @@
 var RecipesApp=angular.module("Recipes", []);
 
 RecipesApp.controller("RecipesController", function($scope, $http){
-	console.log("inside recipes controller");
 
+	$scope.search_term;
+	$scope.search_type = 'title';
 	$scope.search=function() {
 		console.log("inside search function");
-		var type = "ingredients";
-		var keyword = "tahini";
+		$scope.search_type.toLowerCase();
+		$scope.search_term.toLowerCase();
+		console.log($scope.search_type);
+		console.log($scope.search_term);
 
 		// GET Request 
 		$http({
 			method: 'GET',
-			url: "https://mampalicious.herokuapp.com/searchtitle?type="+type+"&keyword="+ keyword.toLowerCase()+"&keywordOriginal=" + keyword.toLowerCase()
+			url: "https://mampalicious.herokuapp.com/searchtitle?type="+$scope.search_type+"&keyword="+ $scope.search_term+"&keywordOriginal=" + $scope.search_term
 		}).then(function success(response) {
+			console.log(response);
+			$scope.recipes = response.data;
+			console.log($scope.recipes);
 			console.log("SUCCESS");
 		}, function error(response) {
 			console.log("ERROR");
 		});
 	};
+
+	$scope.setSearchTitle = function () {
+		$scope.search_type = 'title';
+	}
+
+	$scope.setSearchIngredient = function () {
+		$scope.search_type = 'ingredient';
+	}
 });
 
 // $(document).ready(function() {

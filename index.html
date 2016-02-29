@@ -41,7 +41,7 @@
 		<div class="row" id="searchbar">
 		    <div class="col-sm-8 col-sm-offset-2" id="bar">
 		                <div class="input-group stylish-input-group">
-		                    <input type="text" id="search-bar" class="form-control" placeholder="What ingredients do you have?">
+		                    <input ng-model="search_term "type="text" id="search-bar" class="form-control" placeholder="What ingredients do you have?">
 		                    <span class="input-group-addon">
 		                        <button ng-click="search()" type="submit">
 		                            <span class="glyphicon glyphicon-search"></span>
@@ -52,18 +52,19 @@
 			</div>
 		<div  class="row" id="title_or_ingredient">
 			<div class="btn-group" role="group">
-				<button type="button" class="btn btn-default active" id="title"> Title  </button>
-				<button type="button" class="btn btn-default " id="ingred"> Ingredients </button>
+				<button ng-click="setSearchTitle()" type="button" class="btn btn-default active" id="title"> Title  </button>
+				<button  ng-click="setSearchIngredient()" type="button" class="btn btn-default " id="ingred"> Ingredients </button>
 			</div> 
 		</div>
 		<div class="row" id="recipes">
-			<div class="col-sm-8 col-sm-offset-2 recipe_item hidden" id="recipe_template">
-				<div class="title"></div>
+			<div ng-repeat="recipe in recipes" class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
+				<div class="title">{{recipe.title}}</div>
 				<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
-				<div class="more_info hidden">
-					<div class="ingredients">
+				<div class="more_info">
+					<div ng-repeat="ingredient in recipe.ingredients" class="ingredients"> {{ingredient}}
 					</div>
 					<div class="instructions">
+						{{recipe.instructions}}
 					</div>
 				</div>
 			</div>
