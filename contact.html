@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app = "Recipes">
 
 <head>
 	<title>Peace Corps Recipes</title>
@@ -9,14 +9,16 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" > </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
 	<link rel="stylesheet" href="about_style.css" type="text/css"/>
 	<script src ="index.js"> </script>
 
 </head>
 
-<body>
+<body ng-controller="RecipesController">
 
-	<div id="slide_menu_icon">
+	<div ng-show="showMenu" class="ng-hide"id="slide_menu_icon">
 		<ul id ="navul">
 			<li id = "navli"  > <a href="about.html"> About </a></li>
 			<li> <a href="contact.html">Contact </a></li>
@@ -28,7 +30,7 @@
 	<nav class="navbar">
 		<div class="container-fluid toolbar">
 			<div class="navbar-header">
-				<img id="menu_icon" src="Design_files/menuicon.png"/>
+				<img ng-click="toggleMenu();"id="menu_icon" src="Design_files/menuicon.png"/>
 				<a href="index.html"> 
 					<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
 				</a> 
@@ -40,7 +42,7 @@
           <ul style="padding: 20px">
           	<li id = "q_about"> If you have any questions about the website, email the project lead <b> Woody Butler</b> at forrestwbutler@gmail.com </li>
 
-          	<li id = "q_about"> For more information about the PeaceCorps click this ---> <a href= "http://lmgtfy.com/?q=PeaceCorps">link   </a>. <li>
+          	<li id = "q_about"> For more information about the PeaceCorps visit their official website. <li>
           	</ul>
 
 
