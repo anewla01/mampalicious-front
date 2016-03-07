@@ -24,13 +24,25 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 			console.log("ERROR");
 		});
 	};
+    
+    $scope.showMenu = false;
 
-	$scope.setSearchTitle = function () {
+	$scope.ingredientClass = " ";
+
+    $scope.setSearchTitle = function () {
 		$scope.search_type = 'title';
+		$scope.titleClass = "active";
+		$scope.ingredientClass = " ";
 	}
 
 	$scope.setSearchIngredient = function () {
 		$scope.search_type = 'ingredient';
+		$scope.ingredientClass = "active";
+		$scope.titleClass = " ";
+	}
+
+	$scope.toggleMenu = function() {
+		$scope.showMenu = !$scope.showMenu;
 	}
 });
 

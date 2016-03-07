@@ -15,7 +15,7 @@
 </head>
 <body ng-controller="RecipesController">
 
-	<div id="slide_menu_icon">
+	<div ng-show="showMenu" class="ng-hide" id="slide_menu_icon">
 		<ul>
 			<li><a href="about.html">About</a></li>
 			<li> <a href="contact.html">Contact</a> </li>
@@ -27,7 +27,7 @@
 		<nav class="navbar">
 			<div class="container-fluid toolbar">
 				<div class="navbar-header">
-					<img id="menu_icon" src="Design_files/menuicon.png"/>
+					<img ng-click="toggleMenu();" id="menu_icon" src="Design_files/menuicon.png"/>
 					<a href="index.html"> 
                 		<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
 					</a> 
@@ -52,8 +52,8 @@
 			</div>
 		<div  class="row" id="title_or_ingredient">
 			<div class="btn-group" role="group">
-				<button ng-click="setSearchTitle()" type="button" class="btn btn-default active" id="title"> Title  </button>
-				<button  ng-click="setSearchIngredient()" type="button" class="btn btn-default " id="ingred"> Ingredients </button>
+				<button ng-class="titleClass" ng-click="setSearchTitle();" type="button" class="btn btn-default active" id="title"> Title  </button>
+				<button ng-class="ingredientClass" ng-click="setSearchIngredient()" type="button" class="btn btn-default " id="ingred"> Ingredients </button>
 			</div> 
 		</div>
 		<div class="row" id="recipes">
