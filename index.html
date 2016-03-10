@@ -27,7 +27,7 @@
 		<nav class="navbar">
 			<div class="container-fluid toolbar">
 				<div class="navbar-header">
-					<img ng-click="toggleMenu();" id="menu_icon" src="Design_files/menuicon.png"/>
+					<img ng-click="showMenu=!showMenu;" id="menu_icon" src="Design_files/menuicon.png"/>
 					<a href="index.html"> 
                 		<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
 					</a> 
@@ -59,8 +59,8 @@
 		<div class="row" id="recipes">
 			<div ng-repeat="recipe in recipes" class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
 				<div class="title">{{recipe.title}}</div>
-				<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
-				<div class="more_info">
+				<div ng-click="showDescrip=!showDescrip;" class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
+				<div ng-show="showDescrip" class="ng-hide" class="more_info">
 					<div ng-repeat="ingredient in recipe.ingredients" class="ingredients"> {{ingredient}}
 					</div>
 					<div class="instructions">
