@@ -41,7 +41,7 @@
 		<div class="row" id="searchbar">
 		    <div class="col-sm-8 col-sm-offset-2" id="bar">
 		                <div class="input-group stylish-input-group">
-		                    <input ng-model="search_term "type="text" id="search-bar" class="form-control" placeholder="What ingredients do you have?">
+		                    <input ng-model="search_term "type="text" id="search-bar" class="form-control"  ng-keypress="keypressEnter($event)" placeholder="What ingredients do you have?">
 		                    <span class="input-group-addon">
 		                        <button ng-click="search()" type="submit">
 		                            <span class="glyphicon glyphicon-search"></span>
@@ -52,7 +52,7 @@
 			</div>
 		<div  class="row" id="title_or_ingredient">
 			<div class="btn-group" role="group">
-				<button ng-class="titleClass" ng-click="setSearchTitle();" type="button" class="btn btn-default active" id="title"> Title  </button>
+				<button ng-class="titleClass" ng-click="setSearchTitle();" type="button" class="btn btn-default" id="title"> Title  </button>
 				<button ng-class="ingredientClass" ng-click="setSearchIngredient()" type="button" class="btn btn-default " id="ingred"> Ingredients </button>
 			</div> 
 		</div>

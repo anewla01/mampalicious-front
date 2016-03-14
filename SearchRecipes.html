@@ -1,0 +1,11 @@
+<div class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
+	<div class="title">{{recipe.title}}</div>
+	<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
+	<div class="more_info">
+		<div ng-repeat="ingredient in recipe.ingredients" class="ingredients"> {{ingredient}}
+		</div>
+		<div class="instructions">
+			{{recipe.instructions}}
+		</div>
+	</div>
+</div>
