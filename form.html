@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html ng-app="Recipes">
+
+<head>
+    <title>Peace Corps Recipes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" > </script>
+    <link rel="stylesheet" href="index_style.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src ="index.js"> </script>
+</head>
+<body ng-controller="RecipesController">
+
+    <div ng-show="showMenu" class="ng-hide" id="slide_menu_icon">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li> <a href="contact.html">Contact</a> </li>
+            <li> <a href="form.html">Add Recipe</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+
+        <nav class="navbar">
+            <div class="container-fluid toolbar">
+                <div class="navbar-header">
+                    <img ng-click="showMenu=!showMenu;" id="menu_icon" src="Design_files/menuicon.png"/>
+                    <a href="index.html"> 
+                        <div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <form novalidate class="simple-form">
+            <div style="width: 50%; margin: 0 auto; border: solid 1px blue;">
+                <div style="width: 25%; float: left;">
+                    Ingredients:
+                </div>
+                <div style="width: 75%; float: left;">
+                    <input type="text" ng-model="user.email" style="width: 100%;" />
+                </div>
+            </div>
+            Ingredients: 
+            Instructions: <input type="text" ng-model="user.email" /><br />
+            <input type="button" ng-click="reset()" value="Reset" />
+            <input type="submit" ng-click="save()" value="Save" />
+          </form>
+
+    </div>
+
+</body>
+
+</html>
