@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="index_style.css" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src ="index.js"> </script>
+
+    <link rel="stylesheet" href="form.css" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 </head>
 <body ng-controller="RecipesController">
 
@@ -37,18 +41,53 @@
         </nav>
 
         <form novalidate class="simple-form">
-            <div style="width: 50%; margin: 0 auto; border: solid 1px blue;">
-                <div style="width: 25%; float: left;">
+
+            <h1>
+                Recipe Information
+            </h1>
+            
+            <div class="input_frame clearfix">
+                <div class="title">
+                    Title:
+                </div>
+                <input type="text" placeholder="e.g. Banana Pancakes"/>
+            </div>
+
+            <div class="input_frame clearfix">
+                <div class="title">
                     Ingredients:
                 </div>
-                <div style="width: 75%; float: left;">
-                    <input type="text" ng-model="user.email" style="width: 100%;" />
+                <div class="ingredient_frame">
+                    <div class="ingredient_input clearfix">
+                        <input class="ingredient_amnt" placeholder="Amount" type="text"/>
+                        <input class="ingredient_name" placeholder="Ingredient" type="text"/>
+                    </div>
+                    <div class="added_ingredient" style="font-size: 16px; padding: 5px 10px; margin-top: 5px; background-color: rgba(38, 88, 96, 0.8); color: white;">
+                        1 carrot
+                        <div style="float: right;">
+                            <i class="fa fa-times"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-            Ingredients: 
-            Instructions: <input type="text" ng-model="user.email" /><br />
-            <input type="button" ng-click="reset()" value="Reset" />
-            <input type="submit" ng-click="save()" value="Save" />
+
+            <div class="input_frame clearfix">
+                <div class="title">
+                    Instructions:
+                </div>
+                <textarea type="text" id="instructions_input" ></textarea>
+            </div>
+
+            <div class="input_frame clearfix">
+                <div class="title">
+                    Utilities:
+                </div>
+                <input type="text" placeholder="e.g. stove, pot, oven"/>
+            </div>
+
+
+
+
           </form>
 
     </div>

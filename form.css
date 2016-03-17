@@ -1,0 +1,73 @@
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+.simple-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.simple-form h1 {
+    padding: 30px 0px 10px 0px;
+}
+
+.input_frame {
+    padding: 10px 0px;
+}
+
+.input_frame > .title {
+    width: 25%; 
+    font-size: 16px;
+    float: left;
+    padding: 8px 0px;       /* to align vertically with input */
+}
+
+.input_frame input {
+    width: 75%; 
+    font-size: 16px;
+    float: left;
+    padding: 5px 10px;
+    border: solid 1px gray; /* to match default color of textarea */
+}
+
+.input_frame .ingredient_frame {
+    width: 75%;
+    float: left;
+}
+
+.input_frame .ingredient_input {
+    padding: 5px 0px;
+}
+
+.input_frame input.ingredient_amnt {
+    width: calc(20% - 10px);
+}
+
+.input_frame input.ingredient_name {
+    width: calc(80%);
+    float: right;
+}
+
+.input_frame .added_ingredient .fa-times {
+    color: white;
+}
+
+.input_frame .added_ingredient .fa-times:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
+.input_frame textarea {
+    width: 75%; 
+    font-size: 16px;
+    float: left;
+    resize: vertical;
+    padding: 5px 10px;
+    border: solid 1px gray;
+}
+
+.input_frame #instructions_input {
+    height: 200px;
+}
