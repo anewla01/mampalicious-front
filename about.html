@@ -10,8 +10,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" > </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-	<link rel="stylesheet" href="about_style.css" type="text/css"/>
-	<script src ="index.js"> </script>
+	<link rel="stylesheet" href="css/about_style.css" type="text/css"/>
+	<script src ="js/index.js"> </script>
 
 </head>
 
@@ -19,8 +19,9 @@
 
 	<div ng-show="showMenu" class="ng-hide"id="slide_menu_icon">
 		<ul id ="navul">
-			<li id = "navli"  > <a href="about.html"> About </a></li>
-			<li> <a href="contact.html">Contact</a> </li>
+			<li><a href="about.html">About</a></li>
+            <li> <a href="contact.html">Contact</a> </li>
+            <li> <a href="form.html">Add Recipe</a></li>
 		</ul>
 	</div>
 
@@ -29,7 +30,7 @@
 	<nav class="navbar">
 		<div class="container-fluid toolbar">
 			<div class="navbar-header">
-				<img ng-click="showMenu=!showMenu;" id="menu_icon" src="Design_files/menuicon.png"/>
+				<img ng-click="showMenu=!showMenu;" id="menu_icon" src="img/menuicon.png"/>
 				<a href="index.html"> 
 					<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
 				</a> 

@@ -42,11 +42,14 @@
 
 .input_frame input.ingredient_amnt {
     width: calc(20% - 10px);
+    float: left;
+    margin-right: 10px;
 }
 
 .input_frame input.ingredient_name {
-    width: calc(80%);
-    float: right;
+    width: calc(80% - 25px);
+    float: left;
+    margin-right: 10px;
 }
 
 .input_frame .added_ingredient .fa-times {
@@ -71,3 +74,27 @@
 .input_frame #instructions_input {
     height: 200px;
 }
+
+.input_frame .added_ingredient,
+.input_frame .added_utility {
+    font-size: 16px; 
+    padding: 5px 10px; 
+    margin-top: 5px; 
+    background-color: rgba(38, 88, 96, 0.8); 
+    color: white;
+}
+
+.input_frame .form_utility {
+    width: calc(75% - 25px);
+    margin-right: 10px;
+}
+
+#add-sign {
+    margin-top: 10px;
+}
+
+.fa {
+    margin-top: 10px;
+}
+
+
