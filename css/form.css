@@ -24,7 +24,7 @@
 }
 
 .input_frame input {
-    width: 75%; 
+    width: calc(75% - 25px); 
     font-size: 16px;
     float: left;
     padding: 5px 10px;
@@ -63,7 +63,7 @@
 
 
 .input_frame textarea {
-    width: 75%; 
+    width: calc(75% - 25px); 
     font-size: 16px;
     float: left;
     resize: vertical;
@@ -77,24 +77,42 @@
 
 .input_frame .added_ingredient,
 .input_frame .added_utility {
+    width: calc(100% - 25px);
     font-size: 16px; 
     padding: 5px 10px; 
     margin-top: 5px; 
+    margin-right: 10px;
     background-color: rgba(38, 88, 96, 0.8); 
     color: white;
+    float: left;
 }
 
 .input_frame .form_utility {
-    width: calc(75% - 25px);
+    width: calc(100% - 25px);
     margin-right: 10px;
+}
+
+.input_frame .added_frame {
+    height: 37px;
 }
 
 #add-sign {
     margin-top: 10px;
 }
+#add-sign:hover {
+    color: green;
+    cursor: pointer;
+}
+
+#remove-sign {
+    margin-top: 10px;
+}
+#remove-sign:hover {
+    color: red;
+    cursor: pointer;
+}
 
 .fa {
     margin-top: 10px;
 }
-
 

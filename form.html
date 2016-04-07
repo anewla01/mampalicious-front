@@ -61,12 +61,14 @@
                     <div class="ingredient_input clearfix">
                         <input ng-model="form_amount" class="ingredient_amnt" placeholder="Amount" type="text"/>
                         <input ng-model="form_ingredient" class="ingredient_name" ng-keypress="keypressEnterIngredient($event)" placeholder="Ingredient" type="text"/>
-                        <i ng-click="addIngredient()" class="fa fa-plus"></i>
+                        <i ng-click="addIngredient()" id="add-sign" class="fa fa-plus"></i>
                     </div>
-                    <div ng-repeat="ingredient in form_ingredients" class="added_ingredient">
-                        {{ingredient.amount}}  {{ ingredient.ingredient}}
-                        <div style="float: right;">
-                            <i ng-click="deleteIngredient()" id="add-sign" class="fa fa-times"></i>
+                    <div ng-repeat="ingredient in form_ingredients">
+                        <div class="added_frame">
+                            <div class="added_ingredient clearfix">
+                                {{ingredient.amount}}  {{ ingredient.ingredient}}
+                            </div>
+                            <i ng-click="deleteIngredient()" id="remove-sign" class="fa fa-times"></i>
                         </div>
                     </div>
                 </div>
@@ -83,26 +85,34 @@
                 <div class="title">
                     Utilities:
                 </div>
-                <input ng-model="form_utility" ng-keypress="keypressEnterUtility($event)" class="form_utility" type="text" placeholder="e.g. stove, pot, oven"/>
-                <i ng-click="addUtility()" class="fa fa-plus"></i>
-            </div>
-            <div ng-repeat="utility in form_utilities" class="added_ingredient">
-                    {{utility}}
-                        <div style="float: right;">
-                            <i ng-click="deleteUtility()" id="add-sign" class="fa fa-times"></i>
+
+                <div class="ingredient_frame">
+                    <div class="ingredient_input clearfix">
+                        <input ng-model="form_utility" ng-keypress="keypressEnterUtility($event)" class="form_utility" type="text" placeholder="e.g. stove, pot, oven"/>
+                        <i ng-click="addUtility()" id="add-sign" class="fa fa-plus"></i>
+                    </div>
+                    <div ng-repeat="utility in form_utilities">
+                        <div class="added_frame">
+                            <div class="added_utility">
+                                {{utility}}
+                            </div>
+                            <i ng-click="deleteUtility()" id="remove-sign" class="fa fa-times"></i>
                         </div>
+                    </div>
+                </div>
             </div>
+
             <div class="input_frame clearfix">
                 <div class="title">
                     Cuisine:
                 </div>
-                <input ng-model="form_cuisine" class="form_utility" type="text" placeholder="e.g. Asian, Mediterranean"/>
+                <input ng-model="form_cuisine" type="text" placeholder="e.g. Asian, Mediterranean"/>
             </div>
             <div class="input_frame clearfix">
                 <div class="title">
                     Country:
                 </div>
-                <input ng-model="form_country" class="form_utility" type="text" placeholder="e.g. Turkey, Hong Kong"/>
+                <input ng-model="form_country" type="text" placeholder="e.g. Turkey, Hong Kong"/>
             </div>
             <button ng-click="sendRecipes()" type="submit" class="btn btn-default">Submit</button>
           </form>
