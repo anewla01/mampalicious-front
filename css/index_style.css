@@ -135,7 +135,6 @@ img#menu_icon {
 	background-color: rgba(38, 88, 96, 0.8);
 	position:fixed;
 	padding-top: 55px;
-	/*z-index: 20;*/
  }
 
  .recipe_ingredients ul {
