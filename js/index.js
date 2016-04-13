@@ -57,6 +57,11 @@ RecipesApp.controller("FormController", function($scope, $http) {
 	$scope.form_cuisine;
 	$scope.form_country;
 
+	$scope.show_title_error = false;
+	$scope.show_ingredient_error = false;
+	$scope.show_instruction_error = false;
+
+
 	$scope.addIngredient = function(keyEvent) {
 		if ($scope.form_amount != undefined  && 
 			$scope.form_ingredient!= undefined) {
@@ -70,7 +75,9 @@ RecipesApp.controller("FormController", function($scope, $http) {
 	}
 
 	$scope.addUtility = function() {
-		$scope.form_utilities.push($scope.form_utility);
+		if ($scope.form_utility != undefined) {
+			$scope.form_utilities.push($scope.form_utility);
+		}
 	}	
 
 	$scope.deleteIngredient = function() {
@@ -121,10 +128,22 @@ RecipesApp.controller("FormController", function($scope, $http) {
 			}, data: data
 		}
 
-		$http(req).then(function success(response) {
-			console.log("SUCCESS");
-		}, function error(response) {
-			console.log("ERROR");
-		});
+		if ($scope.form_title        != undefined &&
+			$scope.form_ingredients  != []        &&
+			$scope.form_instructions != undefined) {
+			$http(req).then(function success(response) {
+				console.log("SUCCESS");
+			}, function error(response) {
+				console.log("ERROR");
+			});
+		} else {
+			if ($scope.form_title == undefined)
+				$scope.show_title_error = !$scope.show_title_error;
+			if ($scope.form_ingredients == []) 
+				console.log("no ingredient")
+				$scope.show_ingredient_error = !$scope.show_ingredient_error;
+			if ($scope.form_instructions == undefined)
+				$scope.show_instruction_error = !$scope.show_instruction_error;
+		}
 	}
 });

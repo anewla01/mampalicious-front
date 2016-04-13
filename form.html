@@ -51,6 +51,7 @@
                     Title:
                 </div>
                 <input ng-model="form_title" type="text" placeholder="e.g. Banana Pancakes"/>
+                <div class="error_box" ng-show="show_title_error" class="ng-hide">Required field</div>
             </div>
 
             <div class="input_frame clearfix">
@@ -72,6 +73,8 @@
                         </div>
                     </div>
                 </div>
+                <div class="error_box" ng-show="show_ingredient_error" class="ng-hide">Required field</div>
+
             </div>
 
             <div class="input_frame clearfix">
@@ -79,6 +82,7 @@
                     Instructions:
                 </div>
                 <textarea ng-model="form_instructions" type="text" id="instructions_input" ></textarea>
+                <div class="error_box" ng-show="show_instruction_error" class="ng-hide">Required field</div>
             </div>
 
             <div class="input_frame clearfix">
@@ -91,7 +95,7 @@
                         <input ng-model="form_utility" ng-keypress="keypressEnterUtility($event)" class="form_utility" type="text" placeholder="e.g. stove, pot, oven"/>
                         <i ng-click="addUtility()" id="add-sign" class="fa fa-plus"></i>
                     </div>
-                    <div ng-repeat="utility in form_utilities">
+                    <div ng-repeat="utility in form_utilities track by $index">
                         <div class="added_frame">
                             <div class="added_utility">
                                 {{utility}}
