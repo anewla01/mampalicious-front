@@ -28,6 +28,26 @@ body {
     background:transparent;
 }
 
+/*#title {
+    border: 2px solid gray;
+    border-radius: 0px;
+    width: 100px;
+    height: 50px;
+    margin: 4px;
+    background-color: gray;
+    color: red;
+}
+
+#ingred {
+    border: 2px solid gray;
+    width: 100px;
+    height: 50px;
+    margin: 4px;
+   	background-color: gray;
+    color: red;
+}
+*/
+
 .toolbar {
 	background-color: #265860;
 	text-align: center;
@@ -52,7 +72,7 @@ img#menu_icon {
 
 .navbar-header{
 	text-align: left;
-	height: 45px;
+	height: 50px;
 	padding-left: 10px;
 	padding-top: 10px;
 }
@@ -60,12 +80,15 @@ img#menu_icon {
 .navbar {
 	border: none;
 	z-index: 30;
+	background-color: #e8ab3f;
+	height: 55px;
 }
 
 .title {
 	display: inline;
 	padding-left: 10px;
 	font-size: 20px;
+	color: #e8ab3f;
 }
 
 #bar {
