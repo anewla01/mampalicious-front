@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 #title_or_ingredient {
 	width:100%;
 	text-align: center;
@@ -9,7 +10,7 @@
 }
 
 body {
-	font-family: Helvetica;
+	font-family: Roboto;
 }
 
 .stylish-input-group .input-group-addon{
@@ -82,12 +83,20 @@ img#menu_icon {
 	font-size: 20px;
 }
 
+#recipes {
+	padding: 20px;
+}
+
 .recipe_item {
 	display: inline-block;
 	padding: 20px;
-	border: solid 1px gray;
-	border-radius: 5px;
 	margin-bottom: 1%;
+	background-color: #9D3C3C;
+
+}
+
+.recipe-header {
+	color: white;
 }
 
 .recipe_item .title {
@@ -96,6 +105,7 @@ img#menu_icon {
 	font-weight: 700;
 	font-size: 16px;
 	padding-left: 0px;
+	cursor: pointer;
 }
 
 .recipe_item .dropdown {
@@ -110,10 +120,7 @@ img#menu_icon {
 }
 
 .recipe_item .ingredients {
-	padding: 10px 0px;
-}
-
-.recipe_item .instructions {
+	padding: 5px 0px;
 }
 
 .hidden {
@@ -124,10 +131,6 @@ img#menu_icon {
 	z-index: -1;
 }
 
-#recipes {
-	padding-top: 5%;
-	padding: 3%;
-}
 
 #slide_menu_icon {
 	height: 100%;
@@ -137,24 +140,3 @@ img#menu_icon {
 	padding-top: 55px;
 	z-index: 20;
  }
-
- .recipe_ingredients ul {
- 	list-style-type: circle;
- 	font-family: Helvetica;
- 	color: #333;
- 	padding-left: 2.5%;
- 	font-size: 14px;
- 	line-height: 1.2;
- }
-
- ul {
-	list-style-type: none;
-	font-size: 16px;
-	font-family: Helvetica;
-	color: #265860;
-	padding-left: 10%;
- }
-
- li {
- 	padding-top: 7px;
-}

@@ -16,7 +16,6 @@
 </head>
 
 <body ng-controller="RecipesController">
-
 	<div ng-show="showMenu" class="ng-hide"id="slide_menu_icon">
 		<ul id ="navul">
 			<li><a href="about.html">About</a></li>
@@ -24,24 +23,20 @@
             <li> <a href="form.html">Add Recipe</a></li>
 		</ul>
 	</div>
-
 	<div id="content">
-
-	<nav class="navbar">
-		<div class="container-fluid toolbar">
-			<div class="navbar-header">
-				<img ng-click="showMenu=!showMenu;" id="menu_icon" src="img/menuicon.png"/>
-				<a href="index.html"> 
-					<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
-				</a> 
+		<nav class="navbar">
+			<div class="container-fluid toolbar">
+				<div class="navbar-header">
+					<img ng-click="showMenu=!showMenu;" id="menu_icon" src="img/menuicon.png"/>
+					<a href="index.html"> 
+						<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
+					</a> 
+				</div>
 			</div>
-		</div>
-	</nav>
-
+		</nav>
+	</div>
 	
-      
     <div id = "middle_box">
-    	
     	<ul style= "padding: 20px">
             <li id = "q_about"> What can you find here?  </li>
                <p id = "content_about"> Peruse through thousands of recipes with just a click of a button! You can search by the ingredients you have available to you and find fun recipes to try no matter where you are. 
@@ -50,10 +45,10 @@
             <li id = "q_about"> Who are we? </li>
               <p id = "content_about"> A group of students attending Tufts University, working with Jumbocode, who are trying to change the world one recipe at a time!
               </p>
-               
     	</ul>
-        
-    </div>   
+    </div>
+</body>
+</html>  
 
 
 
