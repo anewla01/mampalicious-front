@@ -48,14 +48,14 @@ RecipesApp.controller("FormController", function($scope, $http) {
 	$scope.form_ingredients = [];
 	$scope.form_utilities = [];
 
-	$scope.form_amount;
-	$scope.form_ingredient;
-	$scope.form_utility;
+	$scope.form_amount = '';
+	$scope.form_ingredient = '';
+	$scope.form_utility = '';
 
 	$scope.form_title = '';
 	$scope.form_instructions = '';
-	$scope.form_cuisine;
-	$scope.form_country;
+	$scope.form_cuisine = '';
+	$scope.form_country = '';
 
 	$scope.show_title_error       = false;
 	$scope.show_ingredient_error  = false;
@@ -63,19 +63,21 @@ RecipesApp.controller("FormController", function($scope, $http) {
 
 
 	$scope.addIngredient = function(keyEvent) {
-		if ($scope.form_amount != undefined  && 
-			$scope.form_ingredient!= undefined) {
+		if ($scope.form_amount != ''  && 
+			$scope.form_ingredient!= '') {
 			form = { 
 				"amount" : $scope.form_amount, 
 				"ingredient" : $scope.form_ingredient
 			}
 		
 	  		$scope.form_ingredients.push(form);
+	  		$scope.form_amount = '';
+	  		$scope.form_ingredient = '';
 		}  	
 	}
 
 	$scope.addUtility = function() {
-		if ($scope.form_utility != undefined) {
+		if ($scope.form_utility != '') {
 			$scope.form_utilities.push($scope.form_utility);
 		}
 	}	
@@ -137,9 +139,23 @@ RecipesApp.controller("FormController", function($scope, $http) {
 			$scope.form_instructions        != '') {
 			$http(req).then(function success(response) {
 				console.log("SUCCESS");
+				alert("Recipe Added")
 			}, function error(response) {
 				console.log("ERROR");
 			});
+			$scope.form_ingredients = [];
+			$scope.form_utilities = [];
+
+			$scope.form_amount = '';
+			$scope.form_ingredient = '';
+			$scope.form_utility = '';
+
+			$scope.form_title = '';
+			$scope.form_instructions = '';
+			$scope.form_cuisine = '';
+			$scope.form_country = '';
+		} else {
+			alert("Fields Missing");
 		}
 	}
 });
