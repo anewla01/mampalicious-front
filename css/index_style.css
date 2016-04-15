@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
 #title_or_ingredient {
 	width:100%;
 	text-align: center;
@@ -51,20 +53,20 @@ body {
 */
 
 .toolbar {
-	/*background-color: #265860;*/
-	background-color: #f9f8f4;
+	background-color: #265860;
+	/*background-color: #f9f8f4;*/
 	text-align: center;
 }
 
 #menu_icon {
-	/*color: #e8ab3f;*/
-	color: #265860;
+	color: #e8ab3f;
+	/*color: #265860;*/
 	width: 15px;
 }
 
 #menu_icon:hover {
-	/*color: white;*/
-	color: #e8ab3f;
+	color: #f9f8f4;
+	/*color: #e8ab3f;*/
 }
 
 .fa-bars {
@@ -81,8 +83,8 @@ body {
 .navbar {
 	border: none;
 	z-index: 30;
-	/*background-color: #e8ab3f;*/
-	background-color: #265860;;
+	background-color: #e8ab3f;
+	/*background-color: #265860;;*/
 	height: 55px;
 }
 
@@ -90,13 +92,13 @@ body {
 	display: inline;
 	padding-left: 10px;
 	font-size: 20px;
-	/*color: #e8ab3f;*/
-	color: #265860;
+	color: #e8ab3f;
+	/*color: #265860;*/
 }
 
 .title:hover {
-	color: #e8ab3f;
-	/*color: white;*/
+	/*color: #e8ab3f;*/
+	color: #f9f8f4;
 }
 
 #bar {

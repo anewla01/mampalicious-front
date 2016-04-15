@@ -22,7 +22,7 @@ body {
 	text-align: center;
 }
 
-a {
+/*a {
 	color: #e8ab3f;
 	display: inline;
 }
@@ -30,9 +30,9 @@ a {
 a:hover {
 	color: white;
 	text-decoration: none;
-}
+}*/
 
-#menu_icon {
+/*#menu_icon {
 	color: #e8ab3f;
 	width: 15px;
 }
@@ -63,7 +63,7 @@ a:hover {
 	display: inline;
 	padding-left: 10px;
 	font-size: 20px;
-}
+}*/
 
 #bar {
 	height:80px;
@@ -98,6 +98,7 @@ a:hover {
 
 #q_about{
 	color: #e8ab3f;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 30px;
 	list-style-type: none;
  	padding-top: 20px;

@@ -12,6 +12,7 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.f4/js/bootstrap.min.js" > </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	<link rel="stylesheet" href="css/about_style.css" type="text/css"/>
+	<link rel="stylesheet" href="css/index_style.css" type="text/css"/>
 	<script src ="js/index.js"> </script>
 
 </head>
@@ -28,9 +29,10 @@
 		<nav class="navbar">
 			<div class="container-fluid toolbar">
 				<div class="navbar-header">
+					<!-- <img ng-click="showMenu=!showMenu;" id="menu_icon" src="img/menuicon.png"/> -->
 					<i ng-click="showMenu=!showMenu;" id="menu_icon" class="menu_icon fa fa-bars" aria-hidden="true"></i>
 					<a href="index.html"> 
-						<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
+                		<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
 					</a> 
 				</div>
 			</div>
@@ -39,7 +41,7 @@
 	
     <div id = "middle_box">
     	<ul style>
-            <li id = "q_about"> HOW - TO: </li>
+            <li id = "q_about"> HOW-TO: </li>
                <p id = "content_about"> PeaceCorp Recipes is designed for you to peruse through thousands of recipes! Search by your available ingredients and tools to see what delicious meal awaits you. 
                </p>
 
@@ -57,6 +59,11 @@
               	Max Tung
               	Suruchi Devanahalli
               </p>
+
+            <li id = "q_about"> PEACE-OUT: </li>
+              <p id = "content_about"> To learn more about the Peace Corp and the amazing work that they do, check out their <a href="http://www.peacecorps.gov/"> website</a>.
+              </p>
+
     	</ul>
     </div>
 </body>

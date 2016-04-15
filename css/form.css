@@ -6,44 +6,25 @@
 .simple-form {
     width: 50%;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .simple-form h1 {
     padding: 30px 0px 10px 0px;
-}
-
-#menu_icon {
     color: #e8ab3f;
-    width: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-
-#menu_icon:hover {
-    color: white;
-}
-
-.fa-bars{
-    font-size: 100px;
-    color: red;
-}
-
-#slide_menu_icon {
-    height: 100%;
-    width: 10%;
-    background-color: rgba(38, 88, 96, 0.8);
-    position:fixed;
-    padding-top: 55px;
-    z-index: 20;
- }
 
 .input_frame {
     padding: 10px 0px;
 }
 
-.input_frame > .title {
+.input_frame .title {
     width: 25%; 
     font-size: 16px;
     float: left;
     padding: 8px 0px;       /* to align vertically with input */
+    color: #3d3d3f;
 }
 
 .input_frame input {
@@ -105,9 +86,11 @@
     padding: 5px 10px; 
     margin-top: 5px; 
     margin-right: 10px;
-    background-color: rgba(38, 88, 96, 0.8); 
+    /*background-color: rgba(38, 88, 96, 0.8); */
     color: white;
     float: left;
+  /*  background-color: #e8ab3f;*/
+    background-color: #265860;
 }
 
 .input_frame .form_utility {
@@ -123,15 +106,15 @@
     margin-top: 10px;
 }
 #add-sign:hover {
-    color: green;
+    color: #265860;
     cursor: pointer;
 }
 
 #remove-sign {
-    margin-top: 10px;
+    margin-top: 14px;
 }
 #remove-sign:hover {
-    color: red;
+    color: #265860;
     cursor: pointer;
 }
 
@@ -157,7 +140,21 @@
     padding: 5px 10px; 
     margin-top: 5px; 
     margin-right: 25px;
-    background-color: red; 
+    background-color: #a00707; 
     color: white;
     float: right;
+}
+
+button.submit.btn.btn-default {
+    background-color: #e8ab3f;
+    border: none;
+    color: #f9f8f4;
+    font-size: 14px;
+    margin-left: 85%;
+    margin-top: 10px;
+}
+
+button.submit.btn.btn-default:hover {
+    background-color: #265860;
+    color: #f9f8f4;
 }
