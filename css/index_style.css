@@ -11,7 +11,9 @@
 
 body {
 	font-family: Roboto;
+	background-color: #f9f8f4;
 }
+
 
 .stylish-input-group .input-group-addon{
     background: white !important; 
@@ -49,38 +51,38 @@ body {
 */
 
 .toolbar {
-	background-color: #265860;
+	/*background-color: #265860;*/
+	background-color: #f9f8f4;
 	text-align: center;
 }
 
-a {
-	color: white;
-	display: inline;
+#menu_icon {
+	/*color: #e8ab3f;*/
+	color: #265860;
+	width: 15px;
 }
 
-a:hover {
-	color: orange;
-	text-decoration: none;
+#menu_icon:hover {
+	/*color: white;*/
+	color: #e8ab3f;
 }
 
-img#menu_icon {
-	display: inline;
-	width: 20px;
-	margin-bottom: 8px;
-	cursor: pointer;
+.fa-bars {
+	font-size: 20px;
 }
 
 .navbar-header{
 	text-align: left;
-	height: 50px;
+	height: 52px;
 	padding-left: 10px;
-	padding-top: 10px;
+	padding-top: 15px;
 }
 
 .navbar {
 	border: none;
 	z-index: 30;
-	background-color: #e8ab3f;
+	/*background-color: #e8ab3f;*/
+	background-color: #265860;;
 	height: 55px;
 }
 
@@ -88,7 +90,13 @@ img#menu_icon {
 	display: inline;
 	padding-left: 10px;
 	font-size: 20px;
+	/*color: #e8ab3f;*/
+	color: #265860;
+}
+
+.title:hover {
 	color: #e8ab3f;
+	/*color: white;*/
 }
 
 #bar {
@@ -162,4 +170,6 @@ img#menu_icon {
 	position:fixed;
 	padding-top: 55px;
  }
+
+
 

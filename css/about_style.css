@@ -1,10 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 body {
-	font-family: Helvetica;
-	
-    background-image: url(http://paradigmmalibu.com/wp-content/uploads/2014/02/organic-food.jpg);
-    
-    background-repeat:no-repeat;
-
+	font-family: Roboto;
+	background-color: #f9f8f4;
 }
 
 .stylish-input-group .input-group-addon{
@@ -26,32 +23,40 @@ body {
 }
 
 a {
-	color: white;
+	color: #e8ab3f;
 	display: inline;
 }
 
 a:hover {
-	color: orange;
+	color: white;
 	text-decoration: none;
 }
 
-img#menu_icon {
-	display: inline;
-	width: 20px;
-	margin-bottom: 8px;
-	cursor: pointer;
+#menu_icon {
+	color: #e8ab3f;
+	width: 15px;
+}
+
+#menu_icon:hover {
+	color: white;
+}
+
+.fa-bars{
+    font-size: 20px;
 }
 
 .navbar-header{
 	text-align: left;
-	height: 45px;
+	height: 50px;
 	padding-left: 10px;
 	padding-top: 10px;
 }
 
 .navbar {
 	border: none;
-	z-index: 30
+	z-index: 30;
+	background-color: #e8ab3f;
+	height: 55px;
 }
 
 .title {
@@ -92,34 +97,51 @@ img#menu_icon {
  }
 
 #q_about{
-
-	color: white;
-	font-size: 20px;
+	color: #e8ab3f;
+	font-size: 30px;
 	list-style-type: none;
-    padding-top: 30px;
-    padding-left: 0px;
+ 	padding-top: 20px;
     text-align; left;
     opacity: 1;
-  
-	
 }
 
 #middle_box{
+	width: 60%; 
+	height: 100%; 
+	margin: 0 
+	auto;
+}
 
-	width:400px; 
-	height: 400px; 
-	margin:0 
-	auto; 
-	background-color:rgba(38, 88, 96, 0.8); 
-    align; 
+#middle_box ul {
+	padding: 20px;
 }
 
 #content_about{
-	color:white;
+	position: relative;
+	color: #3d3d3f;
 	font-size: 15px;
-	padding-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 50px;
 	text-align: left;
 	opacity:1;
+}
+
+#content_about:before {
+	content:'';
+	position: absolute;
+	left: 47%;
+	bottom: 0;
+	height: 1px;
+	width: 3%;
+	border-bottom: 2px solid #3d3d3f;
+}
+
+#content_about a {
+	color: gray;
+}
+
+#content_about a:hover{
+	color: #e8ab3f;
 }
 
  #navul{
@@ -128,19 +150,4 @@ img#menu_icon {
 	font-family: Helvetica;
 	color: #265860;
 	padding-left: 10%; 
-    /*
-	list-style-type: none;
-	font-size: 16px;
-	font-family: Helvetica;
-	color: #265860;
-	padding-left: 10%;
-	*/
- }
-
- li{
- 	padding-top: 7px;
-
 }
-
-
-
