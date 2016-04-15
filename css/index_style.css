@@ -124,13 +124,12 @@ body {
 	display: inline-block;
 	padding: 20px;
 	margin-bottom: 1%;
-	background-color: #9D3C3C;
-
+	background-color: #e8ab3f;
 }
 
-.recipe-header {
+/*.recipe-header {
 	color: white;
-}
+}*/
 
 .recipe_item .title {
 	float: left;
@@ -139,6 +138,9 @@ body {
 	font-size: 16px;
 	padding-left: 0px;
 	cursor: pointer;
+	color: #f9f8f4;
+	position: relative;
+	border-bottom: 2px solid #f9f8f4;
 }
 
 .recipe_item .dropdown {
