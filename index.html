@@ -38,23 +38,30 @@
 		<div class="container-fluid">
 	<div class="container-fluid">
 		<div class="row" id="searchbar">
-		    <div class="col-sm-8 col-sm-offset-2" id="bar">
-		                <div class="input-group stylish-input-group">
-		                    <input ng-model="search_term "type="text" id="search-bar" class="form-control"  ng-keypress="keypressEnter($event)" placeholder="So tell us, what do you want to cook today?">
-		                    <span class="input-group-addon">
-		                        <button ng-click="search()" type="submit">
-		                            <span class="glyphicon glyphicon-search"></span>
-		                        </button>  
-		                    </span>
-		                </div>
-		        </div>
-			</div>
-		<div  class="row" id="title_or_ingredient">
-			<div class="btn-group" role="group">
-				<button ng-class="titleClass" ng-click="setSearchTitle();" type="button" class="btn btn-default" id="title"> Title  </button>
-				<button ng-class="ingredientClass" ng-click="setSearchIngredient()" type="button" class="btn btn-default " id="ingred"> Ingredients </button>
-			</div> 
-		</div>
+			<div class="col-xs-8 col-xs-offset-2">
+		     <div class="input-group stylish-input-group">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    	<span id="search_concept">Search by</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li ng-class="titleClass" ng-click="setSearchTitle();" class="search_filter">Title</li>
+                      <li class="divider"></li>
+                      <li ng-class="ingredientClass" ng-click="setSearchIngredient()" class="search_filter">Ingredients
+                      </li>
+                    </ul>
+                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">         
+                <input ng-model="search_term" type="text" id="search-bar" class="form-control" ng-keypress="keypressEnter($event)" 
+                placeholder="So tell us, what do you want to cook today?">
+                <span class="input-group-btn">
+                    <button ng-click="search()" class="btn btn-default" type="submit">
+                    	<span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
 		<div class="row" id="recipes">
 			<div ng-repeat="recipe in recipes" class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
 				<div class="recipe-header" ng-click="showDescrip=!showDescrip;">

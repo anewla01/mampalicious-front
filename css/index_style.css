@@ -176,4 +176,22 @@ body {
  }
 
 
+.btn-default {
+	background-color: red;
+	border: none;
+}
+
+.btn #search_concept {
+	font-size: 15px;
+	background-color: white;
+}
+
+.search_filter {
+	text-align: center;
+	font-size: 15px;
+}
+
+/*.search_filter:hover{
+	background-color: red;
+}*/
 

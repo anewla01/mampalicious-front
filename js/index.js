@@ -159,5 +159,3 @@ RecipesApp.controller("FormController", function($scope, $http) {
 		}
 	}
 });
-
-
