@@ -152,3 +152,7 @@ a:hover {
 	color: #265860;
 	padding-left: 10%; 
 }
+
+#content_about img {
+	width: 90%;
+}
