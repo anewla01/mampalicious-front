@@ -3,7 +3,7 @@ var RecipesApp=angular.module("Recipes", []);
 RecipesApp.controller("RecipesController", function($scope, $http){
 
 	$scope.search_term;
-	$scope.search_type = 'title';
+	$scope.search_type = 'Title';
 	$scope.search=function() {
 		$scope.search_type.toLowerCase();
 		$scope.search_term.toLowerCase();
@@ -14,6 +14,7 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 		}).then(function success(response) {
 			$scope.recipes = response.data;
 			console.log("SUCCESS");
+			console.log($scope.recipes);
 		}, function error(response) {
 			console.log("ERROR");
 		});
@@ -31,13 +32,13 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 	}
 
     $scope.setSearchTitle = function () {
-		$scope.search_type = 'title';
+		$scope.search_type = 'Title';
 		$scope.titleClass = "active";
 		$scope.ingredientClass = " ";
 	}
 
 	$scope.setSearchIngredient = function () {
-		$scope.search_type = 'ingredient';
+		$scope.search_type = 'Ingredient';
 		$scope.ingredientClass = "active";
 		$scope.titleClass = " ";
 	}
