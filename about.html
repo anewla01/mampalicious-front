@@ -18,39 +18,37 @@
 </head>
 
 <body ng-controller="RecipesController">
-	<div ng-show="showMenu" class="ng-hide"id="slide_menu_icon">
-		<ul id ="navul">
-			<li><a href="about.html">About</a></li>
-            <li> <a href="contact.html">Contact</a> </li>
-            <li> <a href="form.html">Add Recipe</a></li>
-		</ul>
-	</div>
 	<div id="content">
-		<nav class="navbar">
-			<div class="container-fluid toolbar">
-				<div class="navbar-header">
-					<!-- <img ng-click="showMenu=!showMenu;" id="menu_icon" src="img/menuicon.png"/> -->
-					<i ng-click="showMenu=!showMenu;" id="menu_icon" class="menu_icon fa fa-bars" aria-hidden="true"></i>
+		<nav class="navbar navbar-default">
+  			<div class="container-fluid toolbar">
+    			<div class="navbar-header">
 					<a href="index.html"> 
-                		<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
+            			<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
 					</a> 
-				</div>
-			</div>
-		</nav>
-	</div>
-	
-    <div id = "middle_box">
-    	<ul style>
-            <li id = "q_about"> HOW-TO: </li>
-               <p id = "content_about"> PeaceCorp Recipes is designed for you to peruse through thousands of recipes! Search by your available ingredients and tools to see what delicious meal awaits you. 
-               </p>
+    			</div>
 
-            <li id = "q_about"> BEHIND THE SCENES: </li>
-              <p id = "content_about"> PeaceCorp Recipes is one of Tufts <a href="http://jumbocode.org/">JumboCode </a>'s projects. We're a group of gastropod enthusiasts, violin players, ottava rima writers, soldering masters, and passionate programmers — trying to translate our knowledge of semi-colons and ng-controllers to create fruitful and effective things.
-              </p>
+    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      				<ul class="nav navbar-nav navbar-right">
+        				<li> <a href="form.html">Add Recipe</a></li>
+        				<li><a href="about.html">About</a></li>
+						<li> <a href="contact.html">Contact</a> </li>
+    				</ul>
+   				</div>
+  			</div>
+		</nav>	
 
-            <li id = "q_about"> POWER TEAM: </li>
-              <p id = "content_about"> 
+    	<div id = "middle_box">
+    		<ul style>
+           		<li id = "q_about"> HOW-TO: </li>
+               	<p id = "content_about"> PeaceCorp Recipes is designed for you to peruse through thousands of recipes! Search by your available ingredients and tools to see what delicious meal awaits you. 
+               	</p>
+
+            	<li id = "q_about"> BEHIND THE SCENES: </li>
+            	<p id = "content_about"> PeaceCorp Recipes is one of Tufts <a href="http://jumbocode.org/">JumboCode </a>'s projects. We're a group of gastropod enthusiasts, violin players, ottava rima writers, soldering masters, and passionate programmers — trying to translate our knowledge of semi-colons and ng-controllers to create fruitful and effective things.
+            	</p>
+
+            	<li id = "q_about"> POWER TEAM: </li>
+            	<p id = "content_about"> 
               	toInsert = team photo </br>
               	Andre Newland
               	Nicholas Yan
@@ -58,13 +56,14 @@
               	Jade Chan
               	Max Tung
               	Suruchi Devanahalli
-              </p>
+            	</p>
 
-            <li id = "q_about"> PEACE-OUT: </li>
-              <p id = "content_about"> To learn more about the Peace Corp and the amazing work that they do, check out their <a href="http://www.peacecorps.gov/"> website</a>.
-              </p>
-
-    	</ul>
+            	<li id = "q_about"> PEACE-OUT: </li>
+              	<p id = "content_about"> To learn more about the Peace Corp and the amazing work that they do, check out their 
+              		<a href="http://www.peacecorps.gov/"> website</a>.
+              	</p>
+    		</ul>
+    	</div>
     </div>
 </body>
 </html>  

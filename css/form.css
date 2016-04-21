@@ -23,7 +23,7 @@
     width: 25%; 
     font-size: 16px;
     float: left;
-    padding: 8px 0px;       /* to align vertically with input */
+    padding: 8px 0px;      
     color: #3d3d3f;
 }
 
@@ -32,7 +32,7 @@
     font-size: 16px;
     float: left;
     padding: 5px 10px;
-    border: solid 1px gray; /* to match default color of textarea */
+    border: solid 1px gray;
 }
 
 .input_frame .ingredient_frame {
@@ -49,7 +49,6 @@
     float: left;
     margin-right: 10px;
 }
-
 .input_frame input.ingredient_name {
     width: calc(80% - 25px);
     float: left;
@@ -86,12 +85,9 @@
     padding: 5px 10px; 
     margin-top: 5px; 
     margin-right: 10px;
-    /*background-color: rgba(38, 88, 96, 0.8); */
-    color: white;
-    float: left;
-  /*  background-color: #e8ab3f;*/
     background-color: #265860;
 }
+
 
 .input_frame .form_utility {
     width: calc(100% - 25px);
@@ -122,17 +118,14 @@
     margin-top: 10px;
 }
 
- #navul{
+#navul{
     list-style-type: none;
     font-size: 16px;
     font-family: Helvetica;
     color: #265860;
     padding-left: 10%; 
- }
-
- li {
-    padding-top: 7px;
 }
+
 
 .input_frame .error_box {
     width: calc(75% - 25px);
@@ -144,7 +137,6 @@
     color: white;
     float: right;
 }
-
 button.submit.btn.btn-default {
     background-color: #e8ab3f;
     border: none;

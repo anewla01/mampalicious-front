@@ -15,53 +15,50 @@
 	<script src ="js/index.js"> </script>
 </head>
 <body ng-controller="RecipesController">
-
-	<div ng-show="showMenu" class="ng-hide" id="slide_menu_icon">
-		<ul id = "navul">
-			<li><a href="about.html">About</a></li>
-			<li> <a href="contact.html">Contact</a> </li>
-			<li> <a href="form.html">Add Recipe</a></li>
-		</ul>
-	</div>
-
 	<div id="content">
-		<nav class="navbar">
-			<div class="container-fluid toolbar">
-				<div class="navbar-header">
-					<i ng-click="showMenu=!showMenu;" id="menu_icon" class="menu_icon fa fa-bars" aria-hidden="true"></i>
+		<nav class="navbar navbar-default">
+  			<div class="container-fluid toolbar">
+    			<div class="navbar-header">
 					<a href="index.html"> 
-                		<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
+            			<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
 					</a> 
-				</div>
-			</div>
-		</nav>
-		<div class="container-fluid">
-	<div class="container-fluid">
-		<div class="row" id="searchbar">
-			<div class="col-xs-8 col-xs-offset-2">
-		     <div class="input-group stylish-input-group">
-                <div class="input-group-btn search-panel">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    	<span id="search_concept">Search by</span> <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li ng-class="titleClass" ng-click="setSearchTitle();" class="search_filter">Title</li>
-                      <li class="divider"></li>
-                      <li ng-class="ingredientClass" ng-click="setSearchIngredient()" class="search_filter">Ingredients
-                      </li>
-                    </ul>
-                </div>
-                <input type="hidden" name="search_param" value="all" id="search_param">         
-                <input ng-model="search_term" type="text" id="search-bar" class="form-control" ng-keypress="keypressEnter($event)" 
-                placeholder="So tell us, what do you want to cook today?">
-                <span class="input-group-btn">
-                    <button ng-click="search()" class="btn btn-default" type="submit">
-                    	<span class="glyphicon glyphicon-search"></span>
-                    </button>
-                </span>
-            </div>
-        </div>
-    </div>
+    			</div>
+
+    			<div class="collapse navbar-collapse">
+      				<ul class="nav navbar-nav navbar-right">
+        				<li> <a href="form.html">Add Recipe</a></li>
+        				<li><a href="about.html">About</a></li>
+						<li> <a href="contact.html">Contact</a> </li>
+    				</ul>
+   				</div>
+  			</div>
+		</nav>	
+	 	<div class="container-fluid">
+			<div class="row" id="searchbar">
+				<div class="col-xs-8 col-xs-offset-2">
+			     <div class="input-group stylish-input-group">
+	                <div class="input-group-btn search-panel">
+	                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	                    	<span id="search_concept">Search by</span> <span class="caret"></span>
+	                    </button>
+	                    <ul class="dropdown-menu" role="menu">
+	                      <li ng-class="titleClass" ng-click="setSearchTitle();" class="search_filter">Title</li>
+	                      <li class="divider"></li>
+	                      <li ng-class="ingredientClass" ng-click="setSearchIngredient()" class="search_filter">Ingredients
+	                      </li>
+	                    </ul>
+	                </div>
+	                <input type="hidden" name="search_param" value="all" id="search_param">         
+	                <input ng-model="search_term" type="text" id="search-bar" class="form-control" ng-keypress="keypressEnter($event)" 
+	                placeholder="What do you want to cook today?">
+	                <span class="input-group-btn">
+	                    <button ng-click="search()" class="btn btn-default" type="submit">
+	                    	<span class="glyphicon glyphicon-search"></span>
+	                    </button>
+	                </span>
+	            </div>
+	        </div>
+	    </div>
 		<div class="row" id="recipes">
 			<div ng-repeat="recipe in recipes" class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
 				<div class="recipe-header" ng-click="showDescrip=!showDescrip;">
@@ -70,7 +67,8 @@
 				</div>
 				<div ng-show="showDescrip" class="ng-hide" class="more_info">
 					Ingredients : 
-					<div ng-repeat="ingredient in recipe.ingredients" class="ingredients"> {{ingredient}}
+					<div ng-repeat="ingredient in recipe.ingredients" class="ingredients"> 
+						{{ingredient}}
 					</div>
 					Instruction :
 					<div class="instructions">
@@ -79,7 +77,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 </body>
 

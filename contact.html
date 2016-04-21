@@ -18,36 +18,31 @@
 </head>
 
 <body ng-controller="RecipesController">
-
-	<div ng-show="showMenu" class="ng-hide"id="slide_menu_icon">
-		<ul id ="navul">
-			<li><a href="about.html">About</a></li>
-            <li> <a href="contact.html">Contact</a> </li>
-            <li> <a href="form.html">Add Recipe</a></li>
-		</ul>
-	</div>
-
 	<div id="content">
-		<nav class="navbar">
-			<div class="container-fluid toolbar">
-				<div class="navbar-header">
-					<!-- <img ng-click="showMenu=!showMenu;" id="menu_icon" src="img/menuicon.png"/> -->
-					<i ng-click="showMenu=!showMenu;" id="menu_icon" class="menu_icon fa fa-bars" aria-hidden="true"></i>
+		<nav class="navbar navbar-default">
+  			<div class="container-fluid toolbar">
+    			<div class="navbar-header">
 					<a href="index.html"> 
-                		<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
+            			<div class="title"> <strong> PEACE CORPS </strong> RECIPES </div>
 					</a> 
-				</div>
-			</div>
-		</nav>
+    			</div>
 
-	 <div id="middle_box">
-          <ul style="padding: 20px">
-          	<li id = "q_about"> Say Hello </li>
-          	<p> If you have any questions about the website, email the project lead <b> Andre Newnewnewnewland</b> at ________@gmail.com </p>
-<!-- 
-          	<li id = "q_about"> For more information about the PeaceCorps visit their official website. <li> -->
-          	</ul>
+    			<div class="collapse navbar-collapse">
+      				<ul class="nav navbar-nav navbar-right">
+        				<li> <a href="form.html">Add Recipe</a></li>
+        				<li><a href="about.html">About</a></li>
+						<li> <a href="contact.html">Contact</a> </li>
+    				</ul>
+   				</div>
+  			</div>
+		</nav>	
 
-
-
-	 	  </div>   
+		<div id="middle_box">
+        	<ul style="padding: 20px">
+          		<li id = "q_about"> Say Hello </li>
+          		<p> If you have any questions about the website, email the project lead <b> Andre Newnewnewnewland</b> at ________@gmail.com </p>
+          	</ul>	
+		</div>   
+	</div>
+</body>
+</html>
