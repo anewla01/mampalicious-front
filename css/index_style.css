@@ -17,8 +17,8 @@ body {
 
 .navbar-default .navbar-nav>li>a {
     color: black;
-    font-size: 20px;
-    margin: 3px;
+    font-size: 14px;
+    margin: 10px 20px 0px 20px;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -29,8 +29,14 @@ body {
 	border-bottom: 2px solid black;
 }
 
+#menu-header {
+	height: 20%;
+}
+
 #menu {
-	padding-left: 60px;
+	padding-left: 45px;
+	background-color: white;
+	width: 100%;
 }
 
 #home {
@@ -40,9 +46,34 @@ body {
 #food_logo {
 	height: 250px; 
 	display: block;
-	margin: 100px auto 20px auto;
+	margin: 180px auto 140px auto;
 	width: auto;
 }
+
+#search_section {
+	background-color: #f2aa0a;
+    padding: 20px 0px 30px 45px;
+}
+
+#searchbar_input, .searchbar_button {
+	color: black;
+	border-radius: 0px;
+    border: none;
+    height: 40px;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+/* Placeholder text color */
+#searchbar_input::-webkit-input-placeholder {
+  color: black;
+}
+
+.input-group-btn .dropdown-menu {
+	background-color: red;
+	width: 50px;
+}
+
 /*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 

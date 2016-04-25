@@ -20,7 +20,8 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 		});
 	};
     
-    $scope.showMenu = false;
+    $scope.landingDiv = true;
+    $scope.searchDiv = false;
     $scope.showDescrip = false;
     $scope.titleClass = "active";
 	$scope.ingredientClass = " ";
