@@ -1,6 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-default {
+	background-color: white;
+    border: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+    font-size: 20px;
+    margin: 3px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	border-bottom: 2px solid black;
+}
+
+.navbar-default .navbar-nav>li>a:clicked {
+	border-bottom: 2px solid black;
+}
+
+#menu {
+	padding-left: 60px;
+}
+
+#home {
+	border-bottom: 2px solid black;
+}
+
+#food_logo {
+	height: 250px; 
+	display: block;
+	margin: 100px auto 20px auto;
+	width: auto;
+}
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
 .navbar-default .navbar-nav>li>a {
     color: white;
 }
@@ -179,3 +224,4 @@ body {
 	font-size: 15px;
 	background-color: white;
 }
+*/
