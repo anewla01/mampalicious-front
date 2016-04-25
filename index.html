@@ -57,7 +57,7 @@
 	        	</div>
 	    	</div>
 			<div class="row" id="recipes">
-				<div ng-repeat="recipe in recipes" class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
+				<div ng-repeat="recipe in recipes track by $index" class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
 					<div class="recipe-header" ng-click="showDescrip=!showDescrip;">
 						<div class="title">{{recipe.title}}</div>
 						<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
