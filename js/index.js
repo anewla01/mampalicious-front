@@ -159,3 +159,37 @@ RecipesApp.controller("FormController", function($scope, $http) {
 		}
 	}
 });
+
+
+/* Contact us NOT USED CURRENTLY */
+RecipesApp.controller("ContactController", function($scope, $http) {
+
+	$scope.form_name = '';
+	$scope.form_email = '';
+	$scope.form_message = '';
+
+	$scope.show_name_error    = false;
+	$scope.show_email_error   = false;
+	$scope.show_message_error = false;
+
+	$scope.sendContactForm = function () {
+
+		name = $scope.form_name;
+		email = $scope.form_email;
+		message = $scope.form_message;
+
+		/* Dealing with missing fields */
+		$scope.show_name_error    = ($scope.form_name    == '');
+		$scope.show_email_error   = ($scope.form_email   == '');
+		$scope.show_message_error = ($scope.form_message == '');
+
+		if ($scope.form_name         != '' &&
+			$scope.form_email        != ''  &&
+			$scope.form_message      != '') {
+			//alert("valid");
+		} else {
+			//alert("Fields Missing");
+		}
+	}
+});
+
