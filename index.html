@@ -16,7 +16,7 @@
 </head>
 <body ng-controller="RecipesController">
 	<div id="content">
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default menu">
   			<div class="container-fluid toolbar">
     			<div class="navbar-header">
 					<a href="index.html"> 
@@ -35,44 +35,42 @@
 		</nav>	
 	 	<div class="container-fluid">
 			<div class="row" id="searchbar">
-				<div class="col-xs-8 col-xs-offset-2">
-			     <div class="input-group stylish-input-group">
-	                <div class="input-group-btn search-panel">
-	                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-	                    	<span id="search_concept">Search by</span> <span class="caret"></span>
-	                    </button>
-	                    <ul class="dropdown-menu" role="menu">
-	                      <li ng-class="titleClass" ng-click="setSearchTitle();" class="search_filter">Title</li>
-	                      <li class="divider"></li>
-	                      <li ng-class="ingredientClass" ng-click="setSearchIngredient()" class="search_filter">Ingredients
-	                      </li>
-	                    </ul>
-	                </div>
-	                <input type="hidden" name="search_param" value="all" id="search_param">         
-	                <input ng-model="search_term" type="text" id="search-bar" class="form-control" ng-keypress="keypressEnter($event)" 
-	                placeholder="What do you want to cook today?">
-	                <span class="input-group-btn">
-	                    <button ng-click="search()" class="btn btn-default" type="submit">
-	                    	<span class="glyphicon glyphicon-search"></span>
-	                    </button>
-	                </span>
-	            </div>
-	        </div>
-	    </div>
-		<div class="row" id="recipes">
-			<div ng-repeat="recipe in recipes" class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
-				<div class="recipe-header" ng-click="showDescrip=!showDescrip;">
-					<div class="title">{{recipe.title}}</div>
-					<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
-				</div>
-				<div ng-show="showDescrip" class="ng-hide" class="more_info">
-					Ingredients : 
-					<div ng-repeat="ingredient in recipe.ingredients" class="ingredients"> 
-						{{ingredient}}
+				<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" id="search">
+					<div class="input-group">
+			     		<input ng-model="search_term" type="text" id="search-bar" class="form-control" ng-keypress="keypressEnter($event)" placeholder="What do you want to cook today?">
+			     		<div class="input-group-btn">
+			        		<button type="button" class="btn btn-default dropdown-toggle searchbar_button dropdown_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Title
+			        			<span class="caret"></span>
+			        		</button>
+					        <ul class="dropdown-menu">
+					          	<li ng-class="titleClass" ng-click="setSearchTitle();" class="search_filter">Title</li>
+					          	<li ng-class="ingredientClass" ng-click="setSearchIngredient()" class="search_filter">Ingredients
+			                    </li>
+					        </ul>
+			      		</div>
+			     		<span class="input-group-btn">
+			                <button ng-click="search()" class="btn btn-default searchbar_button" type="submit">
+			                   	<span class="glyphicon glyphicon-search"></span>
+			                </button>
+			            </span>
+			    	</div>
+	        	</div>
+	    	</div>
+			<div class="row" id="recipes">
+				<div ng-repeat="recipe in recipes" class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
+					<div class="recipe-header" ng-click="showDescrip=!showDescrip;">
+						<div class="title">{{recipe.title}}</div>
+						<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
 					</div>
-					Instruction :
-					<div class="instructions">
-						{{recipe.instructions}}
+					<div ng-show="showDescrip" class="ng-hide" class="more_info">
+						Ingredients : 
+						<div ng-repeat="ingredient in recipe.ingredients" class="ingredients"> 
+							{{ingredient}}
+						</div>
+						Instruction :
+						<div class="instructions">
+							{{recipe.instructions}}
+						</div>
 					</div>
 				</div>
 			</div>

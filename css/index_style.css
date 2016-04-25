@@ -15,13 +15,16 @@
 	margin-top: 40px; 
 }
 
+#search {
+	margin-top: 5%;
+}    
+
 .btn-group {
 	display: inline-block;
 }
 
 body {
 	font-family: Roboto;
-	background-color: #f9f8f4;
 }
 
 
@@ -40,41 +43,21 @@ body {
     background:transparent;
 }
 
-/*#title {
-    border: 2px solid gray;
-    border-radius: 0px;
-    width: 100px;
-    height: 50px;
-    margin: 4px;
-    background-color: gray;
-    color: red;
-}
-
-#ingred {
-    border: 2px solid gray;
-    width: 100px;
-    height: 50px;
-    margin: 4px;
-   	background-color: gray;
-    color: red;
-}
-*/
-
 .toolbar {
 	background-color: #265860;
-	/*background-color: #f9f8f4;*/
 	text-align: center;
 }
 
+.menu {
+	margin-bottom: 0px;
+}
+
 #menu_icon {
-	color: #e8ab3f;
-	/*color: #265860;*/
 	width: 15px;
 }
 
 #menu_icon:hover {
 	color: #f9f8f4;
-	/*color: #e8ab3f;*/
 }
 
 .fa-bars {
@@ -91,8 +74,6 @@ body {
 .navbar {
 	border: none;
 	z-index: 30;
-	background-color: #e8ab3f;
-	/*background-color: #265860;;*/
 	height: 55px;
 }
 
@@ -100,12 +81,10 @@ body {
 	display: inline;
 	padding-left: 10px;
 	font-size: 20px;
-	color: #e8ab3f;
-	/*color: #265860;*/
+	color: white;
 }
 
 .title:hover {
-	/*color: #e8ab3f;*/
 	color: #f9f8f4;
 }
 
@@ -115,14 +94,31 @@ body {
 }
 
 #searchbar {
-	height: 80px;
+	background-image: url('../food2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+	height: 300px;
 	padding: 5%;
 }
 
+.searchbar_button,
 .form-control {
 	height: 60px;
+	border-radius: 0px;
+}
+
+.form-control {
 	font-size: 20px;
 }
+
+.dropdown_button{
+	border-right: none;
+    border-left: none;
+}
+
+.search_filter {
+	padding: 8px;
+}    
 
 #recipes {
 	padding: 20px;
@@ -132,14 +128,11 @@ body {
 	display: inline-block;
 	padding: 20px;
 	margin-bottom: 1%;
-	background-color: #e8ab3f;
+	background-color: rgba(0,0,0,0.35);
 }
 
-/*.recipe-header {
-	color: white;
-}*/
-
 .recipe_item .title {
+	padding-bottom: 8px;
 	float: left;
 	width: calc(100% - 20px);
 	font-weight: 700;
@@ -148,7 +141,7 @@ body {
 	cursor: pointer;
 	color: #f9f8f4;
 	position: relative;
-	border-bottom: 2px solid #f9f8f4;
+	border-bottom: 1px solid #f9f8f4;
 }
 
 .recipe_item .dropdown {
@@ -174,7 +167,6 @@ body {
 	z-index: -1;
 }
 
-
 #slide_menu_icon {
 	height: 100%;
 	width: 10%;
@@ -183,23 +175,7 @@ body {
 	padding-top: 55px;
  }
 
-
-.btn-default {
-	background-color: red;
-	border: none;
-}
-
 .btn #search_concept {
 	font-size: 15px;
 	background-color: white;
 }
-
-.search_filter {
-	text-align: center;
-	font-size: 15px;
-}
-
-/*.search_filter:hover{
-	background-color: red;
-}*/
-
