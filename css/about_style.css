@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 body {
 	font-family: Roboto;
-	background-color: #f9f8f4;
 }
 
 .stylish-input-group .input-group-addon{
@@ -17,10 +16,6 @@ body {
     background:transparent;
 }
 
-.toolbar {
-	background-color: #265860;
-	text-align: center;
-}
 
 /*a {
 	color: #e8ab3f;

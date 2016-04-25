@@ -25,34 +25,28 @@ body {
 	border-bottom: 2px solid black;
 }
 
-.navbar-default .navbar-nav>li>a:clicked {
-	border-bottom: 2px solid black;
-}
-
-#menu-header {
-	height: 20%;
-}
-
 #menu {
-	padding-left: 45px;
 	background-color: white;
 	width: 100%;
+	padding-left: 28%;
+	position: relative;
 }
 
-#home {
+#selected_page {
 	border-bottom: 2px solid black;
 }
 
 #food_logo {
 	height: 250px; 
 	display: block;
-	margin: 180px auto 140px auto;
+	margin: 120px auto 140px auto;
 	width: auto;
 }
 
 #search_section {
 	background-color: #f2aa0a;
     padding: 20px 0px 30px 45px;
+    height: 100% - 250px;
 }
 
 #searchbar_input, .searchbar_button {
