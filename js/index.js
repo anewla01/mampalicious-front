@@ -44,7 +44,7 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 		$scope.search_type = 'Ingredient';
 		$scope.ingredientClass = "active";
 		$scope.titleClass = " ";
-		$scope.search_by = "Ingredient";
+		$scope.search_by = "Ingredients";
 
 	}
 

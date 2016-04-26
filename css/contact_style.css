@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 body {
     font-family: 'Roboto';
+
 }
 
 .not_form_content {
@@ -8,13 +9,14 @@ body {
     padding-top: 20px;
     text-align; left;
     opacity: 1;
+    margin: 0 auto;
     padding-left: 25%; /* readjust this, temporary fix */
 }
 
 h1 {
+  /*  font-family: 'Roboto Condensed', sans-serif;*/
+    font-size: 25px;
     color: #e8ab3f;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 36px;
 }
 
 p {
@@ -81,6 +83,6 @@ button.submit.btn.btn-default {
 }
 
 button.submit.btn.btn-default:hover {
-    background-color: #265860;
+    background-color: lightgray;
     color: #f9f8f4;
 }
