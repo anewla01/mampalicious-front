@@ -44,7 +44,7 @@
 		<div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" id="search">
 			<div class="input-group">
 				<div class="input-group-btn">
-				    <button ng-click="landingDiv=!landingDiv" type="button" class="btn btn-default dropdown-toggle searchbar_button dropdown_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Title
+				    <button ng-click="displayDiv();" type="button" class="btn btn-default dropdown-toggle searchbar_button dropdown_button" id="titleOrIngred"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{search_by}}
 				    	<span class="caret"></span>
 				    </button>
 			        <ul class="dropdown-menu">
@@ -53,9 +53,9 @@
 	                    </li>
 			        </ul>
 				</div>
-				<input ng-model="search_term" type="text" id="searchbar_input" class="form-control" ng-keypress="keypressEnter($event)" placeholder="What do you want to cook today?" ng-click="landingDiv=!landingDiv">
+				<input ng-model="search_term" type="text" id="searchbar_input" class="form-control" ng-keypress="keypressEnter($event)" placeholder="What do you want to cook today?" ng-click="displayDiv();">
 	     		<span class="input-group-btn">
-	                <button ng-click="search()" class="btn btn-default searchbar_button" type="submit">
+	                <button ng-click="search()" class="btn btn-default searchbar_button" id="searchIcon" type="submit">
 	                   	<span class="glyphicon glyphicon-search"></span>
 	                </button>
 	            </span>

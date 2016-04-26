@@ -25,6 +25,7 @@ RecipesApp.controller("RecipesController", function($scope, $http){
     $scope.showDescrip = false;
     $scope.titleClass = "active";
 	$scope.ingredientClass = " ";
+	$scope.search_by = "Title";
 
 	$scope.keypressEnter = function(keyEvent) {
 	  	if (keyEvent.which === 13) {
@@ -36,14 +37,23 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 		$scope.search_type = 'Title';
 		$scope.titleClass = "active";
 		$scope.ingredientClass = " ";
+		$scope.search_by = "Title";
 	}
 
 	$scope.setSearchIngredient = function () {
 		$scope.search_type = 'Ingredient';
 		$scope.ingredientClass = "active";
 		$scope.titleClass = " ";
+		$scope.search_by = "Ingredient";
+
 	}
 
+	$scope.displayDiv = function () {
+		if ($scope.landingDiv) {
+			$scope.landingDiv = false;
+			$scope.searchDiv = true;
+		}
+	}
 });
 
 RecipesApp.controller("FormController", function($scope, $http) {

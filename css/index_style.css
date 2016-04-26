@@ -58,16 +58,29 @@ body {
     font-size: 14px;
 }
 
+.searchbar_button {
+	width: 110px;
+}
+
 /* Placeholder text color */
 #searchbar_input::-webkit-input-placeholder {
   color: black;
 }
 
-.input-group-btn .dropdown-menu {
-	background-color: red;
-	width: 50px;
+.dropdown-menu {
+	min-width: 110px;
 }
 
+.input-group-btn .dropdown-menu li {
+	padding: 5px 15px 5px 15px;
+}
+
+.input-group-btn .dropdown-menu li:hover {
+	background-color: #e6e6e6;
+}
+#searchIcon {
+	width: initial;
+}
 /*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 
