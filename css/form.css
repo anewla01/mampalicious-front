@@ -13,6 +13,7 @@
     padding: 15px 0px 10px 0px;
     color: #e8ab3f;
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
 }
 
 .input_frame {
@@ -33,6 +34,7 @@
     float: left;
     padding: 5px 10px;
     border: solid 1px gray;
+    outline: none
 }
 
 .input_frame .ingredient_frame {
@@ -71,6 +73,7 @@
     resize: vertical;
     padding: 5px 10px;
     border: solid 1px gray;
+    outline: none
 }
 
 .input_frame #instructions_input {
@@ -84,7 +87,7 @@
     padding: 5px 10px; 
     margin-top: 5px; 
     margin-right: 10px;
-    background-color: #265860;
+    background-color: #e8ab3f;
 }
 
 
@@ -101,7 +104,7 @@
     margin-top: 10px;
 }
 #add-sign:hover {
-    color: #265860;
+    color: #e8ab3f;
     cursor: pointer;
 }
 
@@ -109,7 +112,7 @@
     margin-top: 14px;
 }
 #remove-sign:hover {
-    color: #265860;
+    color: #e8ab3f;
     cursor: pointer;
 }
 
@@ -146,6 +149,6 @@ button.submit.btn.btn-default {
 }
 
 button.submit.btn.btn-default:hover {
-    background-color: #265860;
+    background-color: lightgray;
     color: #f9f8f4;
 }
