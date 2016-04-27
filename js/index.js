@@ -5,21 +5,17 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 	$scope.search_term;
 	$scope.search_type = 'Title';
 	$scope.search=function() {
-		$scope.search_type.toLowerCase();
-		$scope.search_term.toLowerCase();
-
 		$http({
 			method: 'GET',
-			url: "https://mampalicious.herokuapp.com/searchtitle?type="+$scope.search_type + "&keyword=" + $scope.search_term
+			url: "https://mampalicious.herokuapp.com/searchtitle?type="+ $scope.search_type.toLowerCase() + "&keyword=" + $scope.search_term
 		}).then(function success(response) {
 			$scope.recipes = response.data;
-			console.log("SUCCESS");
-			console.log($scope.recipes);
 		}, function error(response) {
 			console.log("ERROR");
 		});
 	};
     
+    $scope.recipes = [];
     $scope.landingDiv = true;
     $scope.searchDiv = false;
     $scope.showDescrip = false;
@@ -37,15 +33,12 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 		$scope.search_type = 'Title';
 		$scope.titleClass = "active";
 		$scope.ingredientClass = " ";
-		$scope.search_by = "Title";
 	}
 
 	$scope.setSearchIngredient = function () {
 		$scope.search_type = 'Ingredient';
 		$scope.ingredientClass = "active";
 		$scope.titleClass = " ";
-		$scope.search_by = "Ingredient";
-
 	}
 
 	$scope.displayDiv = function () {

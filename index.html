@@ -12,7 +12,7 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" > </script>
 	<link rel="stylesheet" href="css/index_style.css" type="text/css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
 	<script src ="js/index.js"> </script>
 </head>
 <body ng-controller="RecipesController">
@@ -44,7 +44,7 @@
 		<div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" id="search">
 			<div class="input-group">
 				<div class="input-group-btn">
-				    <button ng-click="displayDiv();" type="button" class="btn btn-default dropdown-toggle searchbar_button dropdown_button" id="titleOrIngred"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{search_by}}
+				    <button ng-click="displayDiv();" type="button" class="btn btn-default dropdown-toggle searchbar_button dropdown_button" id="titleOrIngred"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{search_type}}
 				    	<span class="caret"></span>
 				    </button>
 			        <ul class="dropdown-menu">
@@ -65,10 +65,12 @@
 	<div ng-show="searchDiv" class="ng-hide">
 	 	<div class="container-fluid">
 			<div class="row" id="recipes">
-				<div ng-repeat="recipe in recipes track by $index" class="col-sm-8 col-sm-offset-2 recipe_item" id="recipe_template">
+				<div ng-repeat="recipe in recipes track by $id(recipe.title)" class="col-sm-6 col-sm-offset-3 recipe_item" id="recipe_template">
 					<div class="recipe-header" ng-click="showDescrip=!showDescrip;">
-						<div class="title">{{recipe.title}}</div>
-						<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div>
+						<div class="title" id='recipe-title'>{{recipe.title}}
+<!-- 						<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div> --> 
+						<span class="glyphicon glyphicon-chevron-down dropdown"></span>
+						</div>
 					</div>
 					<div ng-show="showDescrip" class="ng-hide" class="more_info">
 						Ingredients : 
