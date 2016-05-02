@@ -59,6 +59,7 @@
 
 .input_frame .added_ingredient .fa-times {
     color: white;
+    float: left;
 }
 
 .input_frame .added_ingredient .fa-times:hover {
@@ -88,6 +89,7 @@
     margin-top: 5px; 
     margin-right: 10px;
     background-color: #e8ab3f;
+    float: left;
 }
 
 
@@ -97,7 +99,7 @@
 }
 
 .input_frame .added_frame {
-    height: 37px;
+    /*height: 37px;*/
 }
 
 #add-sign {

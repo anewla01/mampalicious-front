@@ -84,6 +84,7 @@ RecipesApp.controller("FormController", function($scope, $http) {
 	$scope.addUtility = function() {
 		if ($scope.form_utility != '') {
 			$scope.form_utilities.push($scope.form_utility);
+			$scope.form_utility = '';
 		}
 	}	
 
