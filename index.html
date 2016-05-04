@@ -72,12 +72,14 @@
 						<span class="glyphicon glyphicon-chevron-down dropdown"></span>
 						</div>
 					</div>
-					<div ng-show="showDescrip" class="ng-hide" class="more_info">
-						Ingredients : 
-						<div ng-repeat="ingredient in recipe.ingredients" class="ingredients"> 
-							{{ingredient}}
+					<div ng-show="showDescrip" class="ng-hide" class="more_info" >
+							<br> 
+						<h5>Ingredients : </h5>
+						<div ng-repeat="ingredient in recipe.ingredients" class="ingredients" > 
+							 &nbsp; &nbsp;&nbsp; &nbsp;- {{ingredient}}
 						</div>
-						Instruction :
+						<br>
+						 <h5>Instructions :</h5>
 						<div class="instructions">
 							{{recipe.instructions}}
 						</div>
