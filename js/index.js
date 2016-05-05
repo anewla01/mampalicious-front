@@ -132,7 +132,7 @@ RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 
 		var req = {
 	 		method: 'POST',
-			url: 'http://localhost:5000/form',
+			url: 'https://mampalicious.herokuapp.com/form',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			}, data: data
