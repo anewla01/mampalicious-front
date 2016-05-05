@@ -1,4 +1,4 @@
-var RecipesApp=angular.module("Recipes", []);
+var RecipesApp=angular.module("Recipes", ['ngAnimate', 'ngSanitize']);
 
 RecipesApp.controller("RecipesController", function($scope, $http){
 
@@ -16,7 +16,7 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 	};
     
     $scope.recipes = [];
-    $scope.landingDiv = true;
+    $scope.hideFoodLogo = false;
     $scope.searchDiv = false;
     $scope.showDescrip = false;
     $scope.titleClass = "active";
@@ -42,14 +42,12 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 	}
 
 	$scope.displayDiv = function () {
-		if ($scope.landingDiv) {
-			$scope.landingDiv = false;
-			$scope.searchDiv = true;
-		}
+        $scope.hideFoodLogo = true;
+        $scope.searchDiv = true;
 	}
 });
 
-RecipesApp.controller("FormController", function($scope, $http) {
+RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 	$scope.form_ingredients = [];
 	$scope.form_utilities = [];
 
@@ -66,14 +64,14 @@ RecipesApp.controller("FormController", function($scope, $http) {
 	$scope.show_ingredient_error  = false;
 	$scope.show_instruction_error = false;
 
-
 	$scope.addIngredient = function(keyEvent) {
+		$scope.form_amount = $sanitize($scope.form_amount);
+		$scope.form_ingredient = $sanitize($scope.form_ingredient);
 		if ($scope.form_ingredient!= '') {
 			form = { 
 				"amount" : $scope.form_amount, 
 				"ingredient" : $scope.form_ingredient
 			}
-	
 	  		$scope.form_ingredients.push(form);
 	  		$scope.show_ingredient_error = false;
 	  		$scope.form_amount = '';
@@ -82,6 +80,7 @@ RecipesApp.controller("FormController", function($scope, $http) {
 	}
 
 	$scope.addUtility = function() {
+		$scope.form_utility = $sanitize($scope.form_utility);
 		if ($scope.form_utility != '') {
 			$scope.form_utilities.push($scope.form_utility);
 			$scope.form_utility = '';
@@ -98,6 +97,7 @@ RecipesApp.controller("FormController", function($scope, $http) {
 
 	$scope.keypressEnterIngredient = function(keyEvent) {
 	  	if (keyEvent.which === 13) {
+	  		console.log('in keypress ingredient');
 	  		$scope.addIngredient();
 	 	}
 	}
@@ -109,6 +109,7 @@ RecipesApp.controller("FormController", function($scope, $http) {
 	}
 
 	$scope.sendRecipes = function () {
+
 		var amounts = '';
 		var ingredients = '';
 		var utilities = '';
@@ -122,20 +123,24 @@ RecipesApp.controller("FormController", function($scope, $http) {
 			utilities += "utilities=" + $scope.form_utilities[i] + "&";
 		}
 
-		var data = "title=" + $scope.form_title + "&" + 
-					amounts + "&" + ingredients + utilities + 
-					"instructions=" + $scope.form_instructions + "&" + 
-					"country=" + $scope.form_country + "&" + 
-					"cuisine=" + $scope.form_cuisine;
+		ingredients = $sanitize(ingredients);
+		console.log($sanitize($scope.form_instructions));
+		console.log(utilities);
+		var data = "title=" + $sanitize($scope.form_title) + "&" + 
+					amounts + ingredients + utilities + 
+					"instructions=" + $sanitize($scope.form_instructions) + "&" + 
+					"country=" + $sanitize($scope.form_country) + "&" + 
+					"cuisine=" + $sanitize($scope.form_cuisine);
 
 		var req = {
 	 		method: 'POST',
-			url: 'https://mampalicious.herokuapp.com/form',
+			url: 'http://localhost:5000/form',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			}, data: data
 		}
 
+		console.log(data);
 		$scope.show_title_error       = ($scope.form_title        == '');
 		$scope.show_ingredient_error  = ($scope.form_ingredients.length  == 0);
 		$scope.show_instruction_error = ($scope.form_instructions == '');
@@ -165,37 +170,3 @@ RecipesApp.controller("FormController", function($scope, $http) {
 		}
 	}
 });
-
-
-/* Contact us NOT USED CURRENTLY */
-RecipesApp.controller("ContactController", function($scope, $http) {
-
-	$scope.form_name = '';
-	$scope.form_email = '';
-	$scope.form_message = '';
-
-	$scope.show_name_error    = false;
-	$scope.show_email_error   = false;
-	$scope.show_message_error = false;
-
-	$scope.sendContactForm = function () {
-
-		name = $scope.form_name;
-		email = $scope.form_email;
-		message = $scope.form_message;
-
-		/* Dealing with missing fields */
-		$scope.show_name_error    = ($scope.form_name    == '');
-		$scope.show_email_error   = ($scope.form_email   == '');
-		$scope.show_message_error = ($scope.form_message == '');
-
-		if ($scope.form_name         != '' &&
-			$scope.form_email        != ''  &&
-			$scope.form_message      != '') {
-			//alert("valid");
-		} else {
-			//alert("Fields Missing");
-		}
-	}
-});
-
