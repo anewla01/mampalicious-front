@@ -16,7 +16,7 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 	};
     
     $scope.recipes = [];
-    $scope.landingDiv = true;
+    $scope.hideFoodLogo = false;
     $scope.searchDiv = false;
     $scope.showDescrip = false;
     $scope.titleClass = "active";
@@ -42,10 +42,8 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 	}
 
 	$scope.displayDiv = function () {
-		if ($scope.landingDiv) {
-			$scope.landingDiv = false;
-			$scope.searchDiv = true;
-		}
+        $scope.hideFoodLogo = true;
+        $scope.searchDiv = true;
 	}
 });
 
