@@ -97,7 +97,6 @@ RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 
 	$scope.keypressEnterIngredient = function(keyEvent) {
 	  	if (keyEvent.which === 13) {
-	  		console.log('in keypress ingredient');
 	  		$scope.addIngredient();
 	 	}
 	}
@@ -124,8 +123,7 @@ RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 		}
 
 		ingredients = $sanitize(ingredients);
-		console.log($sanitize($scope.form_instructions));
-		console.log(utilities);
+
 		var data = "title=" + $sanitize($scope.form_title) + "&" + 
 					amounts + ingredients + utilities + 
 					"instructions=" + $sanitize($scope.form_instructions) + "&" + 
@@ -140,7 +138,6 @@ RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 			}, data: data
 		}
 
-		console.log(data);
 		$scope.show_title_error       = ($scope.form_title        == '');
 		$scope.show_ingredient_error  = ($scope.form_ingredients.length  == 0);
 		$scope.show_instruction_error = ($scope.form_instructions == '');
@@ -150,7 +147,7 @@ RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 			$scope.form_instructions        != '') {
 			$http(req).then(function success(response) {
 				console.log("SUCCESS");
-				alert("Recipe Added")
+				alert("Recipe Added");
 			}, function error(response) {
 				console.log("ERROR");
 			});
