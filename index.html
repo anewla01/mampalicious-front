@@ -69,19 +69,38 @@
 			<div class="row" id="recipes">
 				<div ng-repeat="recipe in recipes track by $id(recipe.title)" class="col-sm-6 col-sm-offset-3 recipe_item" id="recipe_template">
 					<div class="recipe-header" ng-click="showDescrip=!showDescrip;">
-						<div class="title" id='recipe-title'>{{recipe.title}}
-<!-- 						<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div> --> 
-						<span class="glyphicon glyphicon-chevron-down dropdown"></span>
+						<div class="title" id='recipe-title'> <span id="recipe-title-words">{{recipe.title}} </span>
+						<span class="glyphicon glyphicon-chevron-down dropdown" id="recipe-title-icon"></span>
 						</div>
 					</div>
-					<div ng-show="showDescrip" class="ng-hide" class="more_info">
-						Ingredients : 
-						<div ng-repeat="ingredient in recipe.ingredients" class="ingredients"> 
-							{{ingredient}}
+					<div ng-show="showDescrip" class="ng-hide more_info">
+						<div class="more_info_headers"> 
+							<span class="info_header_underline">Ingredients: </span> </div> 
+						<ul>
+						<li ng-repeat="ingredient in recipe.ingredients" class="ingredients"> 
+							{{recipe.amounts[$index]}} {{ingredient}}
+						</li>
+						</ul>
+						<div class="more_info_headers"> 
+							<span class="info_header_underline">
+						Instruction: </span>
 						</div>
-						Instruction :
 						<div class="instructions">
 							{{recipe.instructions}}
+						</div>
+						<div class="more_info_headers"> 
+							<span class="info_header_underline">
+						Cuisine: </span>
+						</div>
+						<div class="instructions">
+							{{recipe.cuisine}}
+						</div>
+						<div class="more_info_headers"> 
+							<span class="info_header_underline">
+						Country: </span>
+						</div>
+						<div class="instructions">
+							{{recipe.country}}
 						</div>
 					</div>
 				</div>

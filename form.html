@@ -37,8 +37,9 @@
             </nav>    
           </div>
         </div>
-        <form novalidate class="simple-form">
 
+        <form novalidate class="simple-form">
+        <div class="confirmation_box" ng-show="show_success" class="ng-hide">Recipe Successfully Added</div>
             <h1>
                 RECIPE INFORMATION
             </h1>
@@ -63,10 +64,10 @@
                     </div>
                     <div ng-repeat="ingredient in form_ingredients">
                         <div class="added_frame">
-                            <div class="added_ingredient clearfix">
+                            <div class="col-md-11 added_ingredient clearfix">
                                 {{ingredient.amount}}  {{ ingredient.ingredient}}
                             </div>
-                            <i ng-click="deleteIngredient()" id="remove-sign" class="fa fa-times"></i>
+                            <span class="fa fa-times" ng-click="deleteIngredient()" id="remove-sign"></span>
                         </div>
                     </div>
                 </div>
