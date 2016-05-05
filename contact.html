@@ -11,9 +11,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" > </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"> </script>
+  <script src ="js/index.js"> </script>
 	<link rel="stylesheet" href="css/contact_style.css" type="text/css"/>
 	<link rel="stylesheet" href="css/index_style.css" type="text/css"/>
-	<script src ="js/index.js"> </script>
 </head>
 
 <body ng-controller="ContactController">
@@ -39,28 +41,31 @@
 	 <div id="middle_box">
 	 	<div class ="not_form_content">
 	 	<h1> SAY HELLO </h1>
-	 	<p> Shoot us a message at PeaceCorpRecipes@gmail.com. </br>
+	 	<p> Shoot us a message at peacecorpsrecipes@gmail.com. </br>
 	 		Go on, send us a message. We won't bite! </p>
 	 	</div>
 
-		<form novalidate class="simple-form" action="MAILTO:peacecorprecipes@gmail.com" method="post" enctype="text/plain">
+		<form novalidate class="simple-form" action="MAILTO:peacecorpsrecipes@gmail.com" method="post" enctype="text/plain">
 			<div class="input_frame clearfix">
 				<div class="title"> Name: </div>
-                <input ng-model="form_name" name="name" type="text"/>
-                <div class="error_box" ng-show="show_title_error" class="ng-hide">Required field</div>
+                <input ng-model="form_name" name="name" type="text" required>
+                <div class="error_box" ng-show="show_name_error" class="ng-hide">Required field</div>
             </div>
-
+            
            <div class="input_frame clearfix">
                 <div class="title"> Email: </div>
-                <input ng-model="form_email" name="mail" type="text"/>
-                <div class="error_box" ng-show="show_title_error" class="ng-hide">Required field</div>
+                <input ng-model="form_email" name="mail" type="text" />
+                 <div class="error_box" ng-show="show_email_error" class="ng-hide">Required field</div>
+                
             </div>
-
+            
             <div class="input_frame clearfix">
             	<div class="title"> Message: </div>
-                <textarea ng-model="form_message" name="message" type="text" id="instructions_input" ></textarea>
-                <div class="error_box" ng-show="show_instruction_error" class="ng-hide">Required field</div>
+                <textarea ng-model="form_message" name="message" type="text" id="instructions_input"  ></textarea>
+                <div class="error_box" ng-show="show_message_error" class="ng-hide">Required field</div>
             </div>
+
+             
             <button ng-click="sendContactForm()" type="submit" class="submit btn btn-default">Submit</button>
          </form>
 	 </div>   
