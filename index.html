@@ -44,7 +44,7 @@
 		<div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" id="search">
 			<div class="input-group">
 				<div class="input-group-btn">
-				    <button ng-click="displayDiv();" type="button" class="btn btn-default dropdown-toggle searchbar_button dropdown_button" id="titleOrIngred"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{search_type}}
+				    <button ng-click="displayDiv();" type="button" class="btn btn-default dropdown-toggle searchbar_button dropdown_button" id="titleOrIngred" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{search_type}}
 				    	<span class="caret"></span>
 				    </button>
 			        <ul class="dropdown-menu">
@@ -67,9 +67,8 @@
 			<div class="row" id="recipes">
 				<div ng-repeat="recipe in recipes track by $id(recipe.title)" class="col-sm-6 col-sm-offset-3 recipe_item" id="recipe_template">
 					<div class="recipe-header" ng-click="showDescrip=!showDescrip;">
-						<div class="title" id='recipe-title'>{{recipe.title}}
-<!-- 						<div class="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></div> --> 
-						<span class="glyphicon glyphicon-chevron-down dropdown"></span>
+						<div class="title" id='recipe-title'> <span id='recipe-title-words'>{{recipe.title}} </span>
+						<span class="glyphicon glyphicon-chevron-down dropdown" id="recipe-title-icon"></span>
 						</div>
 					</div>
 					<div ng-show="showDescrip" class="ng-hide" class="more_info" >

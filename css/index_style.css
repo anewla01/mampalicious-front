@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -71,6 +72,15 @@ body {
 	min-width: 110px;
 }
 
+/*.input-group-btn {
+	border: 1px solid black;
+}
+
+#searchbar_input {
+	border: 1px solid black;
+	height: 0px;
+}*/
+
 .input-group-btn .dropdown-menu li {
 	padding: 5px 15px 5px 15px;
 }
@@ -83,19 +93,26 @@ body {
 }
 
 #recipe_template {
-	background-color: #f2aa0a;
-	padding: 15px 10px 15px 30px;
-	margin-top: 20px;
-	color: white;
+   	padding: 15px 10px 15px 30px;
+    margin-top: 20px;
+    color: black;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    margin-left: 28%;
+    width: 47.5%;
+    position: relative;
 }
 
-#recipe_template span {
+#recipe_template #recipe-title-icon {
 	float: right;
 	padding-right: 20px;
 }
 
-#recipe-title {
-	border-bottom: 1px solid white;
+#recipe-title-words {
+	padding-bottom: 5px;
+	font-size: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
+    font-size: 15px;
 }
 
 /*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
