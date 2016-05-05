@@ -10,6 +10,7 @@ RecipesApp.controller("RecipesController", function($scope, $http){
 			url: "https://mampalicious.herokuapp.com/searchtitle?type="+ $scope.search_type.toLowerCase() + "&keyword=" + $scope.search_term
 		}).then(function success(response) {
 			$scope.recipes = response.data;
+			console.log($scope.recipes);
 		}, function error(response) {
 			console.log("ERROR");
 		});
