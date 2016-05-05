@@ -175,3 +175,27 @@ ul {
 span.info_header_underline {
 	border-bottom: 1px solid black;
 }
+
+/* remove horizontal scrolling introduced by standard
+ * Bootstrap row */
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* navbar centering */
+
+.navbar .collapse.navbar-collapse {
+    float: right;
+    position:relative;
+    left:-50%;
+    text-align:left;
+    width: 500px;
+}
+
+.navbar ul {
+    list-style: none;
+    position:relative;
+    left:50%;
+}
