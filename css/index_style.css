@@ -1,8 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+
+html {
+    height: 100%;
+}
 
 body {
-	font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
 .navbar-nav {
@@ -28,7 +36,6 @@ body {
 #menu {
 	background-color: white;
 	width: 100%;
-	padding-left: 28%;
 	position: relative;
 }
 
@@ -36,17 +43,11 @@ body {
 	border-bottom: 2px solid black;
 }
 
-#food_logo {
-	height: 250px; 
-	display: block;
-	margin: 120px auto 140px auto;
-	width: auto;
-}
-
 #search_section {
-	background-color: #f2aa0a;
+    background-color: #f2aa0a;
     padding: 20px 0px 30px 45px;
-    height: 100% - 250px;
+    position: absolute;
+    bottom: 0px;
 }
 
 #searchbar_input, .searchbar_button {
@@ -71,6 +72,15 @@ body {
 	min-width: 110px;
 }
 
+/*.input-group-btn {
+	border: 1px solid black;
+}
+
+#searchbar_input {
+	border: 1px solid black;
+	height: 0px;
+}*/
+
 .input-group-btn .dropdown-menu li {
 	padding: 5px 15px 5px 15px;
 }
@@ -83,19 +93,63 @@ body {
 }
 
 #recipe_template {
-	background-color: #f2aa0a;
-	padding: 15px 10px 15px 30px;
-	margin-top: 20px;
-	color: white;
+   	padding: 15px 10px 15px 30px;
+    margin-top: 20px;
+    color: black;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    margin-left: 28%;
+    width: 47.5%;
+    position: relative;
 }
 
-#recipe_template span {
+#recipe_template #recipe-title-icon {
 	float: right;
 	padding-right: 20px;
 }
 
-#recipe-title {
-	border-bottom: 1px solid white;
+#recipe-title-words {
+	padding-bottom: 5px;
+	font-size: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
+    font-size: 15px;
+}
+
+#food_logo {
+    height: 100%; 
+    display: block;
+    padding: 10% 0px;
+    margin: -20px auto 0px auto;
+    width: auto;
+}
+
+#PeaceCorpsImage {
+    height: calc(100% - 152px);
+}
+
+#PeaceCorpsImage .row {
+    height: 100%;
+}
+
+
+#logo_frame {
+    height: 100%;
+    width: 100%;
+}
+
+#PeaceCorpsImage.hideFoodLogo {
+    transition: 1.5s height;
+    height: 0px;
+}
+
+#food_logo.hideFoodLogo {
+    transition: 1.5s linear height;
+    height: 0px;
+    opacity: 0.0;
+}
+
+#search_section.hideFoodLogo {
+    position: relative;
 }
 
 .box:hover {
