@@ -92,7 +92,6 @@
     float: left;
 }
 
-
 .input_frame .form_utility {
     width: calc(100% - 25px);
     margin-right: 10px;
@@ -141,7 +140,7 @@
     color: white;
     float: right;
 }
-button.submit.btn.btn-default {
+.submit.btn.btn-default {
     background-color: #e8ab3f;
     border: none;
     color: #f9f8f4;
@@ -150,7 +149,7 @@ button.submit.btn.btn-default {
     margin-top: 10px;
 }
 
-button.submit.btn.btn-default:hover {
+.submit.btn.btn-default:hover {
     background-color: lightgray;
     color: #f9f8f4;
 }

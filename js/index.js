@@ -68,14 +68,14 @@ RecipesApp.controller("FormController", function($scope, $http) {
 
 
 	$scope.addIngredient = function(keyEvent) {
-		if ($scope.form_amount != ''  && 
-			$scope.form_ingredient!= '') {
+		if ($scope.form_ingredient!= '') {
 			form = { 
 				"amount" : $scope.form_amount, 
 				"ingredient" : $scope.form_ingredient
 			}
-		
+	
 	  		$scope.form_ingredients.push(form);
+	  		$scope.show_ingredient_error = false;
 	  		$scope.form_amount = '';
 	  		$scope.form_ingredient = '';
 		}  	
