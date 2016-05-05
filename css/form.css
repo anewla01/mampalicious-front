@@ -130,7 +130,7 @@
 }
 
 
-.input_frame .error_box {
+.input_frame .error_box{
     width: calc(75% - 25px);
     font-size: 16px; 
     padding: 5px 10px; 
@@ -140,6 +140,19 @@
     color: white;
     float: right;
 }
+
+.confirmation_box {
+    width: calc(100% - 25px);
+    font-size: 16px; 
+    padding: 5px 10px; 
+    margin-top: 5px; 
+    margin-right: 25px;
+    margin-bottom: 15px;
+    background-color: #e8ab3f; 
+    color: white;
+    float: right;
+}
+
 .submit.btn.btn-default {
     background-color: #e8ab3f;
     border: none;
