@@ -98,6 +98,10 @@ body {
 	border-bottom: 1px solid white;
 }
 
+.box:hover {
+	transform: rotate(360deg);
+}
+
 /*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 
