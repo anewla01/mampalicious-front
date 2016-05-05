@@ -78,7 +78,7 @@
 							<span class="info_header_underline">Ingredients: </span> </div> 
 						<ul>
 						<li ng-repeat="ingredient in recipe.ingredients" class="ingredients"> 
-							{{ingredient}}
+							{{recipe.amounts[$index]}} {{ingredient}}
 						</li>
 						</ul>
 						<div class="more_info_headers"> 
@@ -87,6 +87,20 @@
 						</div>
 						<div class="instructions">
 							{{recipe.instructions}}
+						</div>
+						<div class="more_info_headers"> 
+							<span class="info_header_underline">
+						Cuisine: </span>
+						</div>
+						<div class="instructions">
+							{{recipe.cuisine}}
+						</div>
+						<div class="more_info_headers"> 
+							<span class="info_header_underline">
+						Country: </span>
+						</div>
+						<div class="instructions">
+							{{recipe.country}}
 						</div>
 					</div>
 				</div>

@@ -63,6 +63,7 @@ RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 	$scope.show_title_error       = false;
 	$scope.show_ingredient_error  = false;
 	$scope.show_instruction_error = false;
+	$scope.show_success 		  = false;
 
 	$scope.addIngredient = function(keyEvent) {
 		$scope.form_amount = $sanitize($scope.form_amount);
@@ -145,7 +146,7 @@ RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 			$scope.form_instructions        != '') {
 			$http(req).then(function success(response) {
 				console.log("SUCCESS");
-				alert("Recipe Added");
+				$scope.show_success = true;
 			}, function error(response) {
 				console.log("ERROR");
 			});
@@ -160,8 +161,6 @@ RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 			$scope.form_instructions = '';
 			$scope.form_cuisine = '';
 			$scope.form_country = '';
-		} else {
-			alert("Fields Missing");
 		}
 	}
 });
