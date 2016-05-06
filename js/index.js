@@ -123,8 +123,6 @@ RecipesApp.controller("FormController", function($scope, $http, $sanitize) {
 			utilities += "utilities=" + $scope.form_utilities[i] + "&";
 		}
 
-		ingredients = $sanitize(ingredients);
-
 		var data = "title=" + $sanitize($scope.form_title) + "&" + 
 					amounts + ingredients + utilities + 
 					"instructions=" + $sanitize($scope.form_instructions) + "&" + 
